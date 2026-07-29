@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+
+    <title>Строительство/строительная бригада Переславль</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+<link rel="manifest" href="img/site.webmanifest" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link href="https://googleapis.com" rel="stylesheet">
+
+<!-- 2. Подключаем иконки для стрелочек -->
+<link rel="stylesheet" href="https://cloudflare.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary svet fixed-top" >
+      <div class="container-fluid">
+        <img src="img/favicon.ico" alt="Лого" style="width: 25px; height: 25px; margin-left: 50px; margin-right: -10px; vertical-align: middle;"></a>
+        <a class="navbar-brand logo" href="/index.html">Строй Переславль</a>
+       
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link " aria-current="page" href="/index.html"
+                >Главная</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/portfolio.html">Портфолио</a>
+            </li>
+
+          
+              </ul>
+            </li>
+           
+          </ul>
+          
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+<!-- НАЧАЛО ГАЛЕРЕИ РАБОТ BENTO -->
+<div class="bento-gallery">
+
+  <!-- КОЛОНКА 1: ЛЕВАЯ (Блок: ДОМА) -->
+  <div class="bento-column col-1">
+    <div class="bento-item block-doma carousel slide" id="bentoDoma" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="img/home1.jpg" alt="Дома 1"></div>
+        <div class="carousel-item"><img src="img/home2.jpg" alt="Дома 2"></div>
+        <div class="carousel-item"><img src="img/home3.jpg" alt="Дома 3"></div>
+        <div class="carousel-item"><img src="img/home4.jpg" alt="Дома 4"></div>
+        <div class="carousel-item"><img src="img/home5.jpg" alt="Дома 5"></div>
+        <div class="carousel-item"><img src="img/home6.jpg" alt="Дома 6"></div>
+        <div class="carousel-item"><img src="img/home7.jpg" alt="Дома 7"></div>
+      </div>
+      <!-- Надпись "ДОМА" наверху -->
+      <div class="bento-title-layer title-top">ДОМА</div>
+      <!-- Горизонтальные стрелочки листания -->
+      <button class="bento-arrow prev" onclick="moveBentoSlide('bentoDoma', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="bento-arrow next" onclick="moveBentoSlide('bentoDoma', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+    </div> <!-- ИСПРАВЛЕНО: Закрыли сам блок bento-item -->
+  </div> <!-- ИСПРАВЛЕНО: Закрыли блок bento-column col-1 -->
+
+  <!-- КОЛОНКА 2: СРЕДНЯЯ (Блоки: Брусчатка сверху, Гаражи снизу) -->
+  <div class="bento-column col-2">
+    <!-- Блок: БРУСЧАТКА -->
+    <div class="bento-item block-bruschatka carousel slide" id="bentoBruschatka" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="https://avatars.mds.yandex.net/i?id=5de3294d824f97d5e7a59f208b5bbceb_l-4876380-images-thumbs&n=13" alt="Брусчатка 1"></div>
+        <div class="carousel-item"><img src="https://avatars.mds.yandex.net/i?id=143cf9ef30a841bf6f31fe9368b87b0c086bd9c1-9097048-images-thumbs&n=13" alt="Брусчатка 2"></div>
+        <div class="carousel-item"><img src="https://avatars.mds.yandex.net/i?id=f42d901be8e9a93bea1d06ccc7e800f1ee183261-5254610-images-thumbs&n=13" alt="Брусчатка 2"></div>
+      </div>
+      <!-- Надпись "БРУСЧАТКА" внизу -->
+      <div class="bento-title-layer title-bottom">БРУСЧАТКА</div>
+      <button class="bento-arrow prev" onclick="moveBentoSlide('bentoBruschatka', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="bento-arrow next" onclick="moveBentoSlide('bentoBruschatka', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Блок: внутри -->
+    <div class="bento-item block-garazhi carousel slide" id="bentoGarazhi" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="img/vnutri1.jpg" alt="внутри 1"></div>
+        <div class="carousel-item"><img src="img/vnutri2.jpg" alt="внутри 2"></div>
+        <div class="carousel-item"><img src="img/vnutri3.jpg" alt="внутри 2"></div>
+         
+          <div class="carousel-item"><img src="img/vnutri5.jpg" alt="внутри 3"></div>
+         <div class="carousel-item"><img src="img/vnutri6.jpg" alt="внутри 4"></div>
+          <div class="carousel-item"><img src="img/vnutri7.jpg" alt="внутри 5"></div>
+          <div class="carousel-item"><img src="img/vnutri8.jpg" alt="внутри 6"></div>
+          <div class="carousel-item"><img src="img/vnutri9.jpg" alt="внутри 7"></div>
+          <div class="carousel-item"><img src="img/vnutri10.jpg" alt="внутри 8"></div>
+          <div class="carousel-item"><img src="img/vnutri11.jpg" alt="внутри 9"></div>
+          <div class="carousel-item"><img src="img/vnutri12.jpg" alt="внутри 10"></div>
+          <div class="carousel-item"><img src="img/vnutri13.jpg" alt="внутри 11"></div>
+          <div class="carousel-item"><img src="img/vnutri14.jpg" alt="внутри 12"></div>
+          <div class="carousel-item"><img src="img/vnutri15.jpg" alt="внутри 13"></div>
+          <div class="carousel-item"><img src="img/vnutri16.jpg" alt="внутри 14"></div>
+          <div class="carousel-item"><img src="img/vnutri17.jpg" alt="внутри 15"></div>
+           <div class="carousel-item"><img src="img/vnutri18.jpg" alt="внутри 16"></div>
+          <div class="carousel-item"><img src="img/vnutri19.jpg" alt="внутри 17"></div>
+          <div class="carousel-item"><img src="img/vnutri20.jpg" alt="внутри 18"></div>
+          <div class="carousel-item"><img src="img/vnutri21.jpg" alt="внутри 19"></div>
+          <div class="carousel-item"><img src="img/vnutri22.jpg" alt="внутри 20"></div>
+          <div class="carousel-item"><img src="img/vnutri23.jpg" alt="внутри 21"></div>
+           <div class="carousel-item"><img src="img/vnutri24.jpg" alt="внутри 22"></div>
+      </div>
+      <!-- Надпись "ГАРАЖИ" внизу -->
+      <div class="bento-title-layer title-bottom">ОТДЕЛКА</div>
+      <!-- ВЕРТИКАЛЬНЫЕ СТРЕЛКИ -->
+      <button class="bento-arrow arrow-up" onclick="moveBentoSlide('bentoGarazhi', -1)"><i class="fa-solid fa-chevron-up"></i></button>
+      <button class="bento-arrow arrow-down" onclick="moveBentoSlide('bentoGarazhi', 1)"><i class="fa-solid fa-chevron-down"></i></button>
+    </div>
+  </div>
+
+  <!-- КОЛОНКА 3: ПРАВАЯ (Блоки: Беседки сверху, Другие работы снизу) -->
+  <div class="bento-column col-3">
+    <!-- Блок: процесс работы -->
+    <div class="bento-item block-besedki carousel slide" id="bentoBesedki" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="img/rab1.jpg" alt="Беседки 1"></div>
+        <div class="carousel-item"><img src="img/rab2.jpg" alt="Беседки 2"></div>
+        <div class="carousel-item"><img src="img/rab3.jpg" alt="Беседки 3"></div>
+        <div class="carousel-item"><img src="img/rab4.jpg" alt="Беседки 4"></div>
+        <div class="carousel-item"><img src="img/rab5.jpg" alt="Беседки 5"></div>
+        <div class="carousel-item"><img src="img/rab6.jpg" alt="Беседки 6"></div>
+        <div class="carousel-item"><img src="img/rab7.jpg" alt="Беседки 7"></div>
+        <div class="carousel-item"><img src="img/rab8.jpg" alt="Беседки 8"></div>
+        <div class="carousel-item"><img src="img/rab9.jpg" alt="Беседки 9"></div>
+      </div>
+      <!-- Надпись "процесс работы" внизу -->
+      <div class="bento-title-layer title-bottom">ПРОЦЕСС РАБОТЫ</div>
+      <!-- ПЯТЬ ЗВЕЗДОЧЕК НАВЕРХУ на полупрозрачной плашке -->
+      <div class="glass-stars-wrapper">
+        <div class="bento-stars">★★★★★</div>
+      </div> 
+      <button class="bento-arrow prev" onclick="moveBentoSlide('bentoBesedki', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+<button class="bento-arrow next" onclick="moveBentoSlide('bentoBesedki', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Блок: ДРУГИЕ РАБОТЫ -->
+    <div class="bento-item block-other carousel slide" id="bentoOther" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="https://im2.kommersant.ru/Issues.photo/REGIONS/YAROSLAVL_News/2023/06/28/KYA_000101_00528_1_t218_140549.jpg" alt="Другие работы 1"></div>
+        <div class="carousel-item"><img src="https://admpereslavl.ru/userfiles/news/709713720170704021500.jpg" alt="Другие работы 2"></div>
+      </div>
+      <!-- Надпись "ДРУГИЕ РАБОТЫ" внизу -->
+      <div class="bento-title-layer title-bottom">ДРУГИЕ РАБОТЫ</div>
+      <button class="bento-arrow prev" onclick="moveBentoSlide('bentoOther', -1)"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="bento-arrow next" onclick="moveBentoSlide('bentoOther', 1)"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+</div>
+<!-- КОНЕЦ ГАЛЕРЕИ РАБОТ BENTO -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://jsdelivr.net"></script>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script>
+ var typed5 = new Typed('#typed5', {
+    strings: ["Построим дом практически под ключ", "Гарантия качества", "Безопасность и уют", "Опыт больше 9 лет"],
+    typeSpeed: 30,
+    backSpeed: 30,
+    cursorChar: '_',
+    shuffle: true,
+    smartBackspace: false,
+    loop: true
+  });
+</script>
+<script>
+function moveBentoSlide(carouselId, direction) {
+  // Находим нужный блок со слайдером
+  const carousel = document.getElementById(carouselId);
+  if (!carousel) return;
+
+  // Находим все картинки (слайды) внутри него
+  const items = carousel.querySelectorAll('.carousel-item');
+  if (items.length <= 1) return; // Если картинка одна — листать нечего
+
+  // Ищем, какая картинка активна сейчас
+  let activeIndex = -1;
+  items.forEach((item, index) => {
+    if (item.classList.contains('active')) {
+      activeIndex = index;
+    }
+  });
+
+  if (activeIndex === -1) activeIndex = 0;
+
+  // Убираем видимость у текущей картинки
+  items[activeIndex].classList.remove('active');
+
+  // Считаем индекс следующей картинки
+  let nextIndex = activeIndex + direction;
+  
+  // Если ушли за левый край — включаем последнюю, если за правый — возвращаемся к первой
+  if (nextIndex < 0) {
+    nextIndex = items.length - 1;
+  } else if (nextIndex >= items.length) {
+    nextIndex = 0;
+  }
+
+  // Делаем новую картинку активной
+  items[nextIndex].classList.add('active');
+}
+</script>
+  </body>
+</html>

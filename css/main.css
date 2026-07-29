@@ -1,0 +1,874 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
+
+.bloki {
+  display: flex;
+  flex: 1;
+}
+
+.blok-levo {
+  margin: 30px;
+  margin-left: 70px;
+}
+
+.blok-levo img {
+  border-radius: 100px;
+  width: 850px;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 100px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0.75, 0, 0.75) !important;
+}
+
+.img-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0.3, 0, 0.65),
+    transparent 75%
+  ) !important;
+  pointer-events: none;
+  z-index: 1;
+}
+.img-text {
+  position: absolute;
+  top: 60px;
+  left: 70px;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 75%;
+  font-family: "Montserrat" !important;
+  font-size: 40px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.img-text * {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.img-text2 {
+  position: absolute;
+  top: 125px;
+  left: 70px;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 50%;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 100 !important;
+}
+
+/* ОБЪЕДИНИЛИ И ОЧИСТИЛИ СТИЛИ ДЛЯ КАРТИНКИ ПРАВОГО БЛОКА */
+.blok-pravo img {
+  border-radius: 50px;
+  width: 500px;
+  height: 250px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0.7, 0, 0.7);
+}
+
+.img-wrapper-right {
+  position: relative;
+  display: inline-block;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-top: 45px;
+  box-shadow: 0 4px 12px rgba(0, 0.7, 0, 0.7);
+}
+
+.blok-pravo img {
+  border-radius: 50px;
+  width: 500px;
+  height: 250px;
+  position: relative;
+}
+
+.img-wrapper-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0.4, 0, 0.1),
+    transparent 75%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.img-text-right {
+  position: absolute;
+  top: 50px;
+  left: 45px;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 80%;
+  font-family: "Montserrat" !important;
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.img-text-right * {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.img-text3 {
+  position: absolute;
+  top: 150px;
+  left: 45px;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 50%;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 100 !important;
+}
+
+.img-wrapper-right {
+  position: relative;
+  display: inline-block;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-top: 45px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0.7, 0, 0.7);
+}
+
+.img-wrapper-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0.4, 0, 0.1),
+    transparent 75%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.img-text-right {
+  position: absolute;
+  top: 50px;
+  left: 45px;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 80%;
+  font-family: "Montserrat" !important;
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.img-text-right * {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.img-text3 {
+  position: absolute;
+  top: 150px;
+  left: 45px;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 50%;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 100 !important;
+}
+
+.img-wrapper-right-niz {
+  position: relative;
+  display: inline-block;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-top: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0.7, 0, 0.7);
+}
+
+.blok-pravo-niz img {
+  border-radius: 50px;
+  width: 500px;
+  height: 275px;
+  position: relative;
+  filter: brightness(80%);
+  object-fit: cover;
+  display: block;
+}
+
+.img-wrapper-right-niz::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(0, 0.9, 0, 0.8),
+    transparent 80%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.img-text-right-niz {
+  position: absolute;
+  top: 50px;
+  left: 45px;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 80%;
+  font-family: "Montserrat" !important;
+  font-size: 30px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+
+.img-text-right-niz * {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.img-text4 {
+  position: absolute;
+  top: 140px;
+  left: 45px;
+  z-index: 2;
+  color: #ffffff;
+  max-width: 75%;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 18px;
+  line-height: 1.3;
+  font-weight: 100 !important;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 800;
+  margin-left: 20px;
+  margin-right: 30px;
+  color: #300114 !important;
+}
+
+.svet {
+  background-image: none !important;
+  background-color: #fff8dc !important;
+}
+
+.photo-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #ffffff;
+  color: #300114;
+  border: none;
+  border-radius: 50px;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 17px;
+  font-weight: 300;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0.5, 0, 0.5);
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.3s,
+    box-shadow 0.3s ease;
+}
+
+.photo-btn:hover {
+  background-color: #deb887;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0.7, 0, 0.7);
+}
+
+.photo-btn:active {
+  transform: translateY(0);
+}
+
+.btn-group {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: max-content;
+}
+
+.photo-btn-transparent {
+  display: block !important;
+  width: 130px !important;
+  padding: 10px 0 !important;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    border-color 0.3s,
+    transform 0.3s ease;
+}
+
+/* Эффект при наведении на полупрозрачную кнопку */
+.photo-btn-transparent:hover {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Эффект при клике */
+.photo-btn-transparent:active {
+  transform: translateY(0);
+}
+
+/* Навигация и ссылки */
+nav ul li {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+nav ul li a:not(.active):not(.btn):hover {
+  transform: translateY(-1.5px);
+}
+
+/* ИСПРАВЛЕНО: Убрали пробел перед .active, чтобы цвет активной вкладки сработал */
+nav ul li a.active {
+  background-color: #d2b48c !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  padding: 8px 16px !important;
+  border-radius: 8px !important;
+  border-bottom: none !important; /* Убираем прошлые полоски, если они были */
+
+  /* ИГНОРИРОВАНИЕ МЫШИ: плашка не реагирует на наведение и клики */
+  pointer-events: none !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+nav ul li a:not(.active):not(.btn)::after {
+  content: "";
+  position: absolute;
+  bottom: -2.5px; /* Расстояние от текста до полоски */
+  left: 50%; /* Сдвигаем к центру */
+  transform: translateX(-50%) scaleX(0); /* Центрируем и изначально сжимаем в точку */
+
+  /* НАСТРОЙКА ДЛИНЫ И ТОЛЩИНЫ ЛИНИИ */
+  width: 60px; /* Задайте любую длину полоски (например, 30px или 50%) */
+  height: 3px; /* Толщина линии */
+  background-color: #d2b48c; /* Ваш фирменный цвет */
+
+  transition: transform 0.45s ease-in-out; /* Плавное появление */
+}
+
+/* Эффект при наведении: полоска красиво разъезжается из центра */
+nav ul li a:not(.active):not(.btn):hover::after {
+  transform: translateX(-50%) scaleX(1); /* Полоска становится полноценной длины */
+}
+
+/* На всякий случай выравниваем соседние ссылки по центру высоты навибара */
+.navbar-nav {
+  align-items: center;
+}
+
+/* Сетка карточек */
+.card-group0 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  padding: 20px 40px;
+  background-color: #f8f9fa;
+}
+
+.custom-card {
+  background-color: #fff8dc;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-wrapper {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+/* Картинки и текст карточек */
+.custom-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.custom-card:hover img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-family: "Montserrat";
+  font-weight: 900;
+  color: #300114;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.card-text {
+  font-family: sans-serif;
+  font-size: 15px;
+  color: #300114;
+  line-height: 1.6;
+  margin: 0;
+  text-align: center;
+}
+
+/* Секция шагов (Этапы) */
+.steps-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 0;
+  padding: 20px 140px;
+  background-color: transparent;
+  pointer-events: none;
+  user-select: none;
+}
+
+.step-item {
+  flex: 1;
+  padding: 0 40px;
+  border-right: 1.8px solid rgba(0, 0, 0, 0.15);
+  background: none !important;
+  box-shadow: none !important;
+}
+
+.step-item:last-child {
+  border-right: none;
+}
+
+.step-number {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 25px;
+}
+
+.step-title {
+  font-family: "Montserrat" !important;
+  font-weight: 700;
+  font-size: 38px;
+  color: #300114;
+  margin: 0;
+  margin-bottom: 15px;
+  line-height: 1.3;
+}
+
+.step-text {
+  font-family: "Montserrat" !important;
+  font-weight: 400;
+  font-size: 18px;
+  color: #300114;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Главный заголовок этапов */
+.steps-main-title {
+  font-family: "Montserrat" !important;
+  font-weight: 900;
+  font-size: 40px;
+  color: #300114;
+  text-align: center;
+  margin-top: 180px;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.steps-main-title0 {
+  font-family: "Montserrat" !important;
+  font-weight: 900;
+  font-size: 40px;
+  color: #300114;
+  text-align: center;
+  margin-top: 260px;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  pointer-events: none;
+  user-select: none;
+}
+
+body {
+  padding-top: 60px;
+}
+
+/* Каскад кнопок соцсетей */
+.social-buttons-cascade {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+}
+
+.round-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  text-decoration: none;
+  margin-left: -6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s,
+    background-color 0.3s,
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.round-social-btn:first-child {
+  margin-left: 0;
+}
+
+.round-social-btn i {
+  font-size: 22px;
+  transition: transform 0.3s ease;
+}
+
+.btn-tg i {
+  color: #0088cc;
+}
+.btn-wa i {
+  color: #25d366;
+}
+
+.btn-tg {
+  z-index: 1;
+}
+.btn-wa {
+  z-index: 2;
+}
+.btn-max-messenger {
+  z-index: 3;
+} /* Обновили имя класса под ваш SVG-вариант мессенджера MAX */
+
+.round-social-btn:hover {
+  transform: translateY(-5px) scale(1.1);
+  z-index: 10 !important;
+  background-color: #300114;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.round-social-btn:hover i {
+  color: #ffffff !important;
+  transform: rotate(8deg);
+}
+
+/* Каркас Bento-галереи */
+.bento-gallery {
+  display: flex;
+  gap: 24px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+.bento-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.col-1 {
+  flex: 1.2;
+}
+.col-2 {
+  flex: 1;
+}
+.col-3 {
+  flex: 1;
+}
+
+/* Высоты первой и второй колонки */
+.block-doma {
+  height: 555px;
+}
+.block-bruschatka {
+  height: 190px;
+}
+.block-garazhi {
+  height: 340px;
+}
+
+/* Высоты правой колонки по вашему чертежу */
+.block-besedki {
+  height: 290px;
+}
+.block-other {
+  height: 240px;
+}
+
+/* ======================================================= */
+/* 3. ОБЩИЙ СТИЛЬ БОКСОВ И КАРТИНОК                         */
+/* ======================================================= */
+.bento-item {
+  position: relative;
+  border-radius: 35px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+  width: 100%;
+  background-color: #ffffff;
+  transition: box-shadow 0.4s ease;
+}
+
+.carousel-inner,
+.carousel-item,
+.bento-item img {
+  width: 100%;
+  height: 100%;
+}
+
+/* Исходное состояние картинок (Приглушенный кино-монохром) */
+.bento-item img {
+  object-fit: cover;
+  filter: grayscale(30%) brightness(85%);
+  transition: filter 0.5s ease;
+  will-change: filter; /* Задействуем видеокарту для супер-плавного проявления цвета */
+}
+
+/* ======================================================= */
+/* 4. УНИКАЛЬНОЕ ХОВЕР-ВЗАИМОДЕЙСТВИЕ                       */
+/* ======================================================= */
+.bento-item:hover {
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.1),
+    inset 0 0 20px rgba(255, 255, 255, 0.25);
+}
+
+.bento-item:hover img {
+  filter: grayscale(0%) brightness(100%);
+}
+
+/* ======================================================= */
+/* 5. НАДПИСИ И ТЕКСТ НА ФОТОГРАФИЯХ                         */
+/* ======================================================= */
+.bento-title-layer {
+  position: absolute;
+  left: 30px;
+  z-index: 3;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+.title-top {
+  top: 30px;
+}
+.title-bottom {
+  bottom: 30px;
+}
+
+/* ======================================================= */
+/* 6. ПОЛУПРОЗРАЧНЫЕ СТРЕЛОЧКИ С РАЗМЫТИЕМ (GLASS)          */
+/* ======================================================= */
+.bento-arrow {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.22) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  color: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  transition:
+    opacity 0.3s,
+    background-color 0.3s,
+    color 0.3s ease; /* Оптимизировали переход */
+  opacity: 0.75;
+  pointer-events: auto !important;
+}
+
+/* Горизонтальный ход стрелок */
+.bento-arrow.prev {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 15px;
+}
+.bento-arrow.next {
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+}
+
+/* Вертикальный ход стрелок (Строго для Гаражей) */
+.bento-arrow.arrow-up {
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.bento-arrow.arrow-down {
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bento-arrow:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.45) !important;
+  color: #000000;
+}
+
+/* ======================================================= */
+/* 7. ЗВЕЗДОЧКИ ДЛЯ БЕСЕДОК (НА СТЕКЛЯННОЙ ПЛАШКЕ)          */
+/* ======================================================= */
+.glass-stars-wrapper {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 4;
+  padding: 8px 20px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  pointer-events: none;
+  width: max-content;
+}
+
+.bento-stars {
+  color: #ffcc00;
+  font-size: 16px;
+  letter-spacing: 5px;
+  text-shadow: 0 2px 8px rgba(255, 204, 0, 0.4);
+}
+
+/* ======================================================= */
+/* 8. АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ (ЛЕНТА)                   */
+/* ======================================================= */
+@media (max-width: 992px) {
+  .bento-gallery {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .bento-column {
+    width: 100%;
+  }
+  .block-doma,
+  .block-bruschatka,
+  .block-garazhi,
+  .block-besedki,
+  .block-other {
+    height: 260px;
+  }
+  .bento-arrow.arrow-up {
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+  }
+  .bento-arrow.arrow-down {
+    bottom: auto;
+    top: 50%;
+    right: 15px;
+    left: auto;
+    transform: translateY(-50%);
+  }
+}
+
+/* ======================================================= */
+/* 9. ПРАВИЛА ОТОБРАЖЕНИЯ СЛАЙДОВ (ОПТИМИЗИРОВАНО)          */
+/* ======================================================= */
+.bento-item .carousel-item {
+  display: block !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.bento-item .carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.photo-btn,
+.photo-btn-transparent {
+  text-decoration: none !important;
+}
