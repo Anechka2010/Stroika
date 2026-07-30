@@ -872,76 +872,323 @@ body {
 .photo-btn-transparent {
   text-decoration: none !important;
 }
+/* Мобильные стили для шапки сайта */
+@media screen and (max-width: 991px) {
+  .navbar-brand.logo {
+    font-size: 20px; /* Немного уменьшаем размер текста логотипа на смартфонах */
+  }
 
-/* Специальные стили для мобильных телефонов */
+  .navbar .container-fluid img {
+    margin-left: 10px !important; /* Убираем огромный отступ логотипа-картинки на телефонах */
+    margin-right: 10px !important;
+  }
+
+  .navbar-collapse {
+    padding-top: 15px; /* Добавляем аккуратный отступ сверху при раскрытии меню */
+  }
+
+  .navbar-nav .nav-item {
+    text-align: center; /* Центрируем ссылки «Главная» и «Портфолио» в мобильном меню */
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Легкая разделительная линия между ссылками */
+  }
+}
+
+/* Мобильные стили для главного баннера (экраны до 768px) */
 @media screen and (max-width: 768px) {
-  /* 1. Навигация и Шапка сайта */
-  header,
-  nav {
-    flex-direction: column; /* Элементы меню встают друг под друга */
-    text-align: center;
-    padding: 15px 10px;
-  }
-
-  nav a {
-    margin: 8px 0; /* Делаем ссылки крупнее с отступами, чтобы удобно кликать пальцем */
-    display: block;
-    font-size: 18px;
-  }
-
-  /* 2. Главный баннер (Первый экран) */
-  .hero-section,
-  .main-banner {
-    padding: 40px 15px;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 28px !important; /* Уменьшаем гигантский шрифт заголовка, чтобы он не переносился по одной букве */
-    line-height: 1.3;
-  }
-
-  /* 3. Кнопки действия (Наши услуги, Связаться) */
-  .buttons-container,
-  .btn-group {
+  /* Выстраиваем левый блок и правую колонку вертикально */
+  .bloki {
     display: flex;
-    flex-direction: column; /* Кнопки встают вертикально */
-    gap: 12px;
-    width: 100%;
-  }
-
-  button,
-  .button,
-  .btn {
-    width: 100%; /* Каждая кнопка растягивается на всю ширину экрана смартфона */
-    padding: 14px;
-    font-size: 16px;
-  }
-
-  /* 4. Сетка преимуществ и карточки этапов (Фундамент, Коробка, Контроль) */
-  .advantages-grid,
-  .steps-container,
-  .row,
-  .grid {
-    display: flex;
-    flex-direction: column; /* Отменяем горизонтальные колонки, выстраиваем в одну линию */
+    flex-direction: column;
     gap: 20px;
-    padding: 0 15px;
+    padding: 10px;
+    margin-top: 70px; /* Чтобы шапка navbar не перекрывала верх сайта */
   }
 
-  .card,
-  .step-block,
-  .col-4,
-  .col-6 {
-    width: 100% !important; /* Каждая карточка занимает 100% ширины телефона */
-    margin: 0 0 15px 0;
-    box-sizing: border-box;
+  /* Каркасы контейнеров делаем на полную ширину */
+  .image-container,
+  .kolonka,
+  .blok-levo,
+  .blok-pravo {
+    width: 100% !important;
+    float: none !important;
   }
 
-  /* 5. Картинки (например, фото построенного дома) */
-  img {
+  /* Сбрасываем фиксированную высоту у оберток, если она была задана на ПК */
+  .img-wrapper,
+  .img-wrapper-right {
+    height: auto !important;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+
+  /* Главная картинка дома и картинка справа подгоняются под экран */
+  .img-wrapper img,
+  .img-wrapper-right img {
+    width: 100% !important;
+    height: 350px !important; /* Ограничиваем высоту на мобильном, чтобы картинка не была огромной */
+    object-fit: cover; /* Картинка аккуратно обрезается, сохраняя пропорции */
+  }
+
+  /* ТЕКСТЫ И КНОПКИ НА ЛЕВОЙ КАРТИНКЕ */
+  /* Заголовок "Строительство с гарантией" */
+  .img-text {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    font-size: 22px !important;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Чтобы текст читался на любом фоне */
+  }
+
+  /* Подзаголовок и кнопки опускаем вниз картинки */
+  .img-text2 {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+  }
+
+  .img-text2 div:first-child {
+    font-size: 14px !important;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    line-height: 1.4;
+  }
+
+  /* Делаем кнопки "Наши услуги" и "Связаться" на всю ширину */
+  .img-text2 .btn-group {
+    display: flex;
+    flex-direction: column; /* Кнопки встают друг под друга */
+    gap: 10px;
     width: 100%;
-    height: auto; /* Картинки автоматически сжимаются под экран телефона и не вылезают за границы */
-    border-radius: 8px;
   }
+
+  .photo-btn,
+  .photo-btn-transparent {
+    width: 100% !important;
+    text-align: center;
+    padding: 12px 0 !important;
+    font-size: 15px !important;
+    border-radius: 8px !important;
+    display: block;
+  }
+
+  /* ТЕКСТЫ И ИКОНКИ НА ПРАВОЙ КАРТИНКЕ */
+  /* Текст "9+ лет строим..." */
+  .img-text-right {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    right: 15px;
+    font-size: 18px !important;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Блок с печатным текстом (Typed.js) */
+  .img-text3 {
+    position: absolute;
+    bottom: 75px;
+    left: 15px;
+    color: #fff;
+    font-size: 16px !important;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Блок круглых кнопок соцсетей опускаем в самый низ правой картинки */
+  .social-buttons-cascade {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    display: flex !important;
+    flex-direction: row !important; /* Оставляем их в ряд, чтобы не занимали много места */
+    gap: 15px;
+  }
+
+  .round-social-btn {
+    width: 45px !important;
+    height: 45px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+}
+
+/* ==========================================================================
+     МОБИЛЬНЫЕ СТИЛИ ДЛЯ БЛОКА "ЛЮБОЙ ВИД РАБОТ" И ПРЕИМУЩЕСТВ
+     ========================================================================== */
+
+/* 1. Блок с брусчаткой (правый низ) */
+.blok-pravo-niz {
+  width: 100% !important;
+  float: none !important;
+  margin-top: 15px;
+}
+
+.img-wrapper-right-niz {
+  height: auto !important;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.img-wrapper-right-niz img {
+  width: 100% !important;
+  height: 280px !important; /* Ограничиваем высоту картинки во дворе на телефоне */
+  object-fit: cover;
+}
+
+/* Наложение текстов на картинке с брусчаткой */
+.img-text-right-niz {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  right: 15px;
+  font-size: 20px !important;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.img-text4 {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  right: 15px;
+}
+
+.img-text4 div {
+  font-size: 14px !important;
+  color: #fff;
+  line-height: 1.4;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* 2. Блок "Почему стоит выбрать именно нас?" */
+.steps-main-title {
+  font-size: 26px !important; /* Уменьшаем заголовок секции, чтобы он красиво смотрелся на экране телефона */
+  text-align: center;
+  margin-top: 40px !important;
+  margin-bottom: 25px !important;
+  padding: 0 15px;
+}
+
+/* Контейнер шагов перестраиваем из строки в колонку */
+.steps-container {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important; /* Делаем зазоры между карточками преимуществ */
+  padding: 0 15px !important;
+}
+
+/* Каждая карточка преимущества (01, 02, 03) встает во всю ширину */
+.step-item {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+  padding: 20px !important; /* Внутренние отступы, чтобы текст не прижимался к краям карточки */
+  text-align: center; /* Центрируем иконки и тексты для аккуратного мобильного вида */
+}
+
+/* Цифры 01, 02, 03 */
+.step-number {
+  font-size: 36px !important; /* Чуть уменьшаем гигантские цифры, чтобы они не перекрывали заголовки */
+  margin-bottom: 10px !important;
+  display: inline-block;
+}
+
+/* Маленькие заголовки (Оперативность, Гибкость...) */
+.step-title {
+  font-size: 18px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Текст описания преимуществ */
+.step-text {
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  margin-bottom: 0 !important;
+}
+/* ==========================================================================
+     МОБИЛЬНЫЕ СТИЛИ ДЛЯ БЛОКА ЭТАПОВ СТРОИТЕЛЬСТВА
+     ========================================================================== */
+
+/* Главный заголовок секции этапов */
+.steps-main-title0 {
+  font-size: 24px !important; /* Уменьшаем размер букв, чтобы заголовок красиво помещался в 2-3 строки */
+  text-align: center;
+  margin-top: 50px !important;
+  margin-bottom: 30px !important;
+  padding: 0 15px;
+  line-height: 1.3;
+}
+
+/* Группа карточек переходит из горизонтального ряда в вертикальный */
+.card-group0 {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 25px !important; /* Делаем зазоры между этапами, чтобы они не слипались */
+  padding: 0 15px !important;
+}
+
+/* Каждая отдельная карточка этапа на весь экран смартфона */
+.custom-card {
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex;
+  flex-direction: column; /* Элементы внутри карточки (картинка, текст) идут сверху вниз */
+  border-radius: 12px !important; /* Красивые скругленные углы карточки */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Легкая тень для объема */
+  background-color: #fff;
+  overflow: hidden;
+  margin: 0 !important;
+}
+
+/* Обертка картинки в карточке */
+.card-img-wrapper {
+  width: 100% !important;
+  height: 200px !important; /* Фиксируем одинаковую высоту для всех картинок этапов */
+  overflow: hidden;
+}
+
+/* Сами фотографии этапов (фундамент, коробка, контроль) */
+.card-img-wrapper img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover; /* Картинки аккуратно заполняют блок без искажения пропорций */
+}
+
+/* Текстовый блок внутри карточки */
+.custom-card .card-body {
+  padding: 20px !important;
+  text-align: left; /* Оставляем выравнивание текста по левому краю для удобства чтения */
+}
+
+/* Заголовки карточек (Фундамент, Коробка дома...) */
+.custom-card .card-title {
+  font-size: 20px !important;
+  font-weight: bold;
+  margin-bottom: 10px !important;
+}
+
+/* Текст описания этапа */
+.custom-card .card-text {
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #555; /* Делаем цвет текста чуть мягче для лучшего восприятия */
+  margin-bottom: 0 !important;
+}
+
+/* Корректировка размера печатного текста на телефонах */
+#typed5 {
+  font-size: 15px !important;
+  font-weight: 500;
+  line-height: 1.4;
+  display: inline-block;
 }
