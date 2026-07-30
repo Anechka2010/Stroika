@@ -678,7 +678,22 @@ body {
 .block-other {
   height: 240px;
 }
+/* ==========================================================================
+   ПЛАВНАЯ СМЕНА ФОТО ДЛЯ БЕНТО-ГАЛЕРЕИ НА НОУТБУКЕ
+   ========================================================================== */
+/* Мягкое скольжение картинок в бенто-галерее (вместо вспышки) */
+.bento-item .carousel-inner {
+  display: flex !important;
+  /* Плавный сдвиг всей ленты картинок за 0.5 секунды */
+  transition: transform 0.3s ease-in-out !important;
+}
 
+.bento-item .carousel-item {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+  display: block !important;
+  position: relative !important;
+}
 /* ======================================================= */
 /* 3. ОБЩИЙ СТИЛЬ БОКСОВ И КАРТИНОК                         */
 /* ======================================================= */
@@ -824,6 +839,46 @@ body {
   letter-spacing: 5px;
   text-shadow: 0 2px 8px rgba(255, 204, 0, 0.4);
 }
+
+/* Стили для новой кнопки X */
+.btn-x-twitter {
+  background-color: #ffffff !important; /* Черный фон для логотипа X */
+  color: #300114 !important; /* Белый цвет самой иконки */
+}
+
+.btn-x-twitter i {
+  font-size: 18px !important; /* Комфортный размер иконки внутри кружка */
+}
+
+/* Делаем переключение слайдов карусели плавным на ноутбуках */
+.carousel-item {
+  /* Изменяем время перехода. 0.8s — это скорость анимации (почти секунда). 
+     Можете поставить 1.2s, чтобы сделать перелистывание еще более тягучим */
+  transition:
+    transform 0.8s ease-in-out,
+    opacity 0.8s ease-in-out !important;
+}
+
+/* Если используете эффект растворения carousel-fade, настраиваем и его скорость */
+.carousel-fade .carousel-item {
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.8s !important; /* Время плавного растворения */
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+/* Вставьте в основную часть main.css */
+.carousel-fade .carousel-item {
+  opacity: 0 !important;
+  transition-property: opacity !important;
+  transition-duration: 0.8s !important; /* Настраиваем время плавного растворения фото (почти секунда) */
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1 !important;
+}
 /* ==========================================================================
    ПОЛНАЯ МОДЕРНИЗИРОВАННАЯ МОБИЛЬНАЯ ВЕРСИЯ САЙТА СТРОЙ ПЕРЕСЛАВЛЬ
    ========================================================================== */
@@ -860,10 +915,72 @@ body {
     z-index: 99999 !important; /* Поднимаем в самый верх */
   }
 
+  /* ==========================================================================
+   ИДЕАЛЬНЫЙ НАСТОЯЩИЙ ГАМБУРГЕР (ЛИНИИ ИЗ CSS)
+   ========================================================================== */
+  .navbar-toggler {
+    background-color: #d2b48c !important; /* Цвет вашей кнопки */
+    border: none !important;
+    border-radius: 50% !important;
+    padding: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 10px rgba(140, 98, 57, 0.25) !important;
+    transition: all 0.2s ease-in-out !important;
+  }
+
+  /* Обертка для линий */
+  .custom-hamburger {
+    width: 22px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ровно распределяет три линии по высоте */
+  }
+
+  /* Сами ярко-белые линии */
+  .custom-hamburger span {
+    display: block;
+    width: 100%;
+    height: 2.5px; /* Толщина линий */
+    background-color: #300114 !important; /* ЧИСТЫЙ БЕЛЫЙ ЦВЕТ LINES */
+    border-radius: 2px;
+    transition: all 0.35s ease-in-out;
+  }
+
+  /* Эффект легкого уменьшения кнопки при нажатии */
+  .navbar-toggler:active {
+    transform: scale(0.7) !important;
+    background-color: #836951 !important;
+  }
+
   /* Когда меню открыто (Bootstrap добавляет этот класс автоматически по клику) */
   .navbar-collapse.show {
     right: 0 !important;
     display: block !important;
+  }
+  /* НАЙДИТЕ ЭТОТ БЛОК И ЗАМЕНИТЕ В НЁМ СТРОКИ С ФОНОМ: */
+  .navbar-collapse {
+    position: fixed !important;
+    top: 56px !important;
+    right: -100% !important;
+    width: 60% !important;
+    height: calc(100vh - 56px) !important;
+
+    /* ИСПРАВЛЕНО: Делаем фон полупрозрачным (0.85 означает 85% видимости и 15% прозрачности) */
+    background-color: rgba(255, 255, 255, 0.7) !important;
+    background: rgba(255, 255, 255, 0.6) !important;
+
+    /* ДОПОЛНИТЕЛЬНО: Эффект размытия заднего плана (как на iPhone) для дорогого вида */
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+
+    padding: 20px 15px !important;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05) !important;
+    transition: right 0.4s ease-in-out !important;
+    display: block !important;
+    z-index: 99999 !important;
   }
 
   .navbar-nav {
@@ -875,16 +992,16 @@ body {
   .navbar-nav .nav-item .nav-link {
     text-align: center !important;
     padding: 10px 15px !important;
-    font-size: 16px !important;
+    font-size: 20px !important;
     font-weight: 500 !important;
-    color: #333333 !important;
+    color: #300114 !important;
     border-radius: 8px !important;
     transition: all 0.3s ease !important;
   }
 
   /* Выделение активной страницы */
   .navbar-nav .nav-item .nav-link.active {
-    background-color: #2b8a3e !important;
+    background-color: #d2b48c !important;
     color: #ffffff !important;
     border-radius: 8px !important;
     font-weight: bold !important;
@@ -916,7 +1033,7 @@ body {
     clip-path: none !important;
   }
   .blok-levo {
-    padding: 10px 6px !important;
+    padding: 10px 3px !important;
   }
 
   /* НАМЕРТВО УБИРАЕМ ОВАЛЫ у оберток картинок */
@@ -945,54 +1062,67 @@ body {
     border-radius: 24px !important; /* Дублируем скругление для самой картинки */
   }
 
+  /* Главный текст "Строительство с гарантией" */
   .img-text {
     position: absolute !important;
-    top: 25px !important;
-    left: 20px !important;
+    top: 19px !important; /* Отступ от верхнего края картинки */
+    left: 10px !important;
     right: 20px !important;
-    font-size: 25px !important; /* Главный текст побольше чуть-чуть */
+    font-size: 27px !important;
     font-weight: bold !important;
     color: #fff !important;
     text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9) !important;
     z-index: 2 !important;
+    white-space: nowrap !important;
   }
 
+  /* ИСПРАВЛЕНО: Нижний текст "Строим дома на века..." и кнопки */
   .img-text2 {
     position: absolute !important;
-    bottom: 20px !important;
+    top: 65px !important; /* Подтянули вплотную к верхнему тексту, убрав огромное расстояние */
     left: 20px !important;
     right: 20px !important;
     z-index: 2 !important;
+    max-width: 280px;
+    width: 100% !important;
+    font-weight: 500 !important;
   }
+
   .img-text2 div:first-child {
     font-size: 15px !important;
     color: #fff !important;
-    margin-bottom: 5px !important; /* Меньше отступ снизу от нижнего текста */
+    margin-bottom: 8px !important; /* Минимальный отступ перед кнопками */
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9) !important;
     line-height: 1.4 !important;
+    width: 100% !important;
   }
 
   /* Овальные капсульные кнопки ниже текста */
   .img-text2 .btn-group {
     display: flex !important;
     flex-direction: column !important;
+    align-items: flex-start !important; /* ИСПРАВЛЕНО: Кнопки теперь начинаются ровно на одном уровне слева */
     gap: 10px !important;
     width: 100% !important;
-    margin-top: 10px !important; /* Сместили чуть ниже нижнего текста */
+    margin-top: 10px !important;
   }
+  /* Сами кнопки: убираем margin: 0 auto, чтобы они не прыгали в центр */
   .photo-btn,
   .photo-btn-transparent {
-    width: 100% !important;
+    width: fit-content !important;
+    max-width: 100% !important;
     text-align: center !important;
-    padding: 12px 0 !important;
+    padding: 10px 24px !important;
     font-size: 15px !important;
-    border-radius: 50px !important; /* ИДЕАЛЬНО ОВАЛЬНЫЕ КНОПКИ */
-    display: block !important;
+    border-radius: 50px !important;
+    display: inline-block !important;
+    box-sizing: border-box !important;
+    margin: 0 !important; /* ИСПРАВЛЕНО: Сбросили центрирование, кнопки стоят ровно по левой сетке */
   }
   .photo-btn-transparent {
     background-color: rgba(255, 255, 255, 0.25) !important;
-    border: 1px solid #fff !important;
-    color: #fff !important;
+    border: 1px solid #300114 !important;
+    color: #300114 !important;
   }
 
   /* КАРТОЧКА 2 (Правая верхняя) */
@@ -1063,6 +1193,7 @@ body {
     top: 20px !important;
     left: 20px !important;
     font-size: 20px !important;
+
     z-index: 2 !important;
   }
 
@@ -1074,6 +1205,7 @@ body {
     left: 20px !important;
     right: 20px !important;
     z-index: 2 !important;
+    font-weight: 500 !important;
   }
   .img-text4 div {
     font-size: 15px !important;
@@ -1103,58 +1235,79 @@ body {
   /* --------------------------------------------------------------------------
    3. БЛОК "ПОЧЕМУ СТОИТ ВЫБРАТЬ ИМЕННО НАС?" (ШАГИ)
    -------------------------------------------------------------------------- */
+  /* 1. Исправляем первый заголовок "Почему стоит выбрать именно нас?" */
   .steps-main-title {
-    font-size: 26px !important;
+    font-size: 24px !important;
     text-align: center !important;
-    margin-top: 40px !important;
+    font-weight: bold !important;
+    /* Увеличиваем верхний отступ, чтобы заголовок вылез из-под зафиксированной шапки */
+    margin-top: 90px !important;
     margin-bottom: 30px !important;
+    padding-inline: 15px !important; /* Отступы только по бокам */
+    line-height: 1.4 !important;
   }
 
+  /* 2. Идеальное центрирование текстов внутри шагов 01, 02, 03 */
   .steps-container {
     display: flex !important;
     flex-direction: column !important;
-    gap: 30px !important;
-    padding: 0 15px !important;
-    margin-bottom: 65px !important; /* Увеличенный отступ снизу, чтобы карточки были дальше */
+    align-items: center !important; /* Центрирует сами блоки */
+    gap: 35px !important;
+    padding-inline: 15px !important;
+    margin-bottom: 60px !important;
   }
 
   .step-item {
     width: 100% !important;
-    padding: 15px !important;
-    text-align: center !important;
+    max-width: 100% !important;
+    text-align: center !important; /* Центрирует текст внутри блоков */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
   }
 
-  /* ИЗЫСКАННЫЕ ЦИФРЫ В КРУЖОЧКЕ С БЕЛЫМ ТЕКСТОМ */
   .step-number {
-    font-size: 18px !important;
+    font-size: 18px !important; /* Удобный размер цифр */
     font-weight: bold !important;
     color: #ffffff !important; /* Белые цифры */
-    background-color: #2b8a3e !important; /* Цвет кружочка */
-    width: 48px !important;
-    height: 48px !important;
+    background-color: #d2b48c !important; /* Фирменный цвет кружка (зеленый/коричневый — измените на свой) */
+    width: 46px !important;
+    height: 46px !important;
     display: flex !important;
-    align-items: center !important;
+    align-items: center !important; /* Выравнивание цифры строго по центру круга */
     justify-content: center !important;
-    border-radius: 50% !important; /* Кружочек */
-    margin: 0 auto 12px auto !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+    border-radius: 50% !important; /* Идеальный круг */
+    margin: 0 auto 15px auto !important; /* Центрируем сам круг на странице */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important; /* Изящная легкая тень */
   }
 
   .step-title {
-    font-size: 21px !important; /* Заголовки шагов побольше */
+    font-size: 22px !important;
     font-weight: bold !important;
+    margin-top: 10px !important;
+    margin-bottom: 8px !important;
+    text-align: center !important;
   }
 
   .step-text {
-    font-size: 16px !important; /* Текст снизу побольше */
-    line-height: 1.4 !important;
-  }
-  /* --------------------------------------------------------------------------4. БЛОК КАРТОЧЕК СНИЗУ ("ОТ ЗАКЛАДКИ ПЕРВОГО КАМНЯ...")-------------------------------------------------------------------------- */
-  .steps-main-title0 {
-    font-size: 25px !important;
+    font-size: 16px !important;
+    line-height: 1.5 !important;
     text-align: center !important;
-    margin-top: 35px !important;
+    color: #300114 !important;
+    max-width: 320px !important; /* Ограничиваем ширину, чтобы текст не размазывался по экрану */
+  }
+
+  /* 3. Исправляем кривой нижний заголовок "От закладки первого камня..." */
+  .steps-main-title0 {
+    font-size: 24px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    margin-top: 40px !important;
     margin-bottom: 30px !important;
+    padding-inline: 15px !important; /* Паддинг только по бокам */
+    /* ИСПРАВЛЕНО: Увеличиваем межстрочный интервал, чтобы строчки не налезали друг на друга */
+    line-height: 1.4 !important;
   }
   .card-group0 {
     display: flex !important;
@@ -1189,7 +1342,7 @@ body {
     font-size: 16px !important;
     /* Текст описания больше */
     line-height: 1.5 !important;
-    color: #444 !important;
+    color: #300114 !important;
   }
   /* Убираем подчеркивание у всех кнопок-ссылок на сайте */
   .photo-btn,
@@ -1201,5 +1354,182 @@ body {
   .photo-btn:hover,
   .photo-btn-transparent:hover {
     text-decoration: none !important;
+  }
+  /* Поднимаем кнопку меню и саму шапку в самый верхний слой */
+  .fixed-top,
+  .navbar {
+    z-index: 100000 !important; /* Намертво закрепляет шапку поверх всех картинок и текстов */
+  }
+
+  .navbar-toggler {
+    position: relative !important;
+    z-index: 100001 !important; /* Гарантирует, что кнопка нажимается пальцем */
+    pointer-events: auto !important;
+  }
+}
+/* ==========================================================================
+   МОБИЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ ПОРТФОЛИО (BENTO GRID)
+   ========================================================================== */
+/* ==========================================================================
+   ИСПРАВЛЕННЫЕ МОБИЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ ПОРТФОЛИО (БЕНТО-ГРИД)
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+  /* 1. Отменяем сетку из колонок и выстраиваем карточки вертикально */
+  .bento-container {
+    display: flex !important;
+    flex-direction: column !important; /* Выстраивает блоки строго друг под друга */
+    grid-template-columns: 1fr !important; /* На всякий случай сбрасываем CSS Grid */
+    gap: 20px !important; /* Удобный отступ между карточками */
+    padding: 0 15px !important; /* Паддинг только по бокам страницы */
+    margin-top: 80px !important; /* Выталкиваем из-под шапки сайта */
+    box-sizing: border-box !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* 2. НАМЕРТВО СБРОСИТЬ СЖАТИЕ У ВСЕХ ПЛИТОК (Дома, Брусчатка, Отделка и т.д.) */
+  .bento-item,
+  .block-bruschatka,
+  .block-garazhi,
+  .block-otdelka,
+  .block-vnutri,
+  div[class*="block-"],
+  div[class*="col-"] {
+    width: 100% !important; /* Каждая плитка растягивается на всю ширину экрана */
+    max-width: 100% !important;
+    grid-column: auto !important; /* Сбрасываем объединение колонок из ПК-версии */
+    grid-row: auto !important;
+    height: auto !important;
+    min-height: 280px !important; /* Красивая фиксированная высота для телефона */
+    border-radius: 24px !important; /* Ваши фирменные скругленные углы */
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 0 10px 0 !important;
+    float: none !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Большую карточку "ДОМА" (самую первую) сделаем повыше остальных */
+  .bento-item:first-child,
+  div[class*="block-"]:first-child {
+    min-height: 380px !important;
+  }
+
+  /* 3. Адаптируем фотографии и карусели внутри плиток */
+  .bento-item img,
+  .carousel-inner,
+  .carousel-item,
+  .carousel-item img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 280px !important;
+    object-fit: cover !important; /* Фотографии заполняют блок без сплющивания */
+    border-radius: 24px !important;
+  }
+
+  .bento-item:first-child img,
+  .bento-item:first-child .carousel-item img {
+    min-height: 380px !important;
+  }
+
+  /* 4. Исправляем заголовки на плитках (чтобы не переносились некрасиво) */
+  .bento-item h3,
+  .bento-item .block-title,
+  .bento-item div[class*="-title"],
+  .bento-item .img-text {
+    position: absolute !important;
+    top: 40px !important;
+    left: 20px !important;
+    font-size: 22px !important; /* Комфортный мобильный шрифт */
+    font-weight: bold !important;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8) !important;
+    z-index: 5 !important;
+    margin: 0 !important;
+    white-space: nowrap !important; /* Заголовки строго в одну линию */
+  }
+
+  /* 5. Стрелочки переключения слайдов на смартфонах */
+  .bento-item .arrow,
+  .bento-item .carousel-control-prev,
+  .bento-item .carousel-control-next {
+    width: 38px !important;
+    height: 38px !important;
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.4
+    ) !important; /* Затемненный аккуратный кружок */
+    border-radius: 50% !important;
+    z-index: 6 !important;
+  }
+
+  /* Звездочки рейтинга */
+  .rating-stars,
+  .stars-container {
+    position: absolute !important;
+    top: 22px !important;
+    right: 20px !important;
+    z-index: 5 !important;
+  }
+
+  /* Добавьте в самый конец мобильного блока CSS */
+  .bento-container,
+  .bento-grid,
+  [class*="bento-"],
+  [class*="grid-"] {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+  }
+  /* 1. Возвращаем карточку Отделка (block-garazhi) на её стандартное место */
+  .block-garazhi h3,
+  .block-garazhi .block-title,
+  .block-garazhi div[class*="-title"],
+  .block-garazhi .img-text {
+    top: 20px !important;
+    bottom: auto !important;
+  }
+
+  /* 2. НАЦЕЛИВАЕМСЯ НА ПРОЦЕСС РАБОТЫ (block-besedki) */
+  /* Опускаем надпись "ПРОЦЕСС РАБОТЫ" вниз карточки */
+  .block-besedki .bento-title-layer.title-bottom {
+    position: absolute !important;
+    top: 75% !important;
+    bottom: 25px !important; /* Прижали к нижнему краю карточки */
+    left: 20px !important;
+    right: 20px !important;
+    text-align: left !important;
+    font-size: 22px !important;
+    font-weight: bold !important;
+    color: #ffffff !important;
+    z-index: 5 !important;
+  }
+
+  /* ПРИНУДИТЕЛЬНОЕОЖИВЛЕНИЕ СТРЕЛОК НА КАРТОЧКЕ ДОМА */
+  .bento-item .bento-arrow,
+  .bento-item button[class*="bento-arrow"],
+  #bentoBesedki .bento-arrow,
+  div[id*="bento"] .bento-arrow {
+    position: absolute !important;
+    z-index: 999999 !important; /* Выталкиваем стрелочки на самый верхний слой над картинками! */
+    pointer-events: auto !important; /* Разрешаем клики пальцем */
+    cursor: pointer !important;
+    display: flex !important; /* Гарантируем, что они видны на телефоне */
+  }
+
+  /* Запрещаем тексту и плашкам перекрывать стрелки */
+  .bento-title-layer,
+  .glass-stars-wrapper {
+    pointer-events: none !important; /* Клик будет идти сквозь текст прямо на стрелки */
+  }
+  /* Поднимаем кастомные стрелочки бенто-галереи в самый верхний слой */
+  .bento-arrow,
+  button.bento-arrow {
+    position: relative !important;
+    z-index: 999999 !important; /* Выталкиваем над картинками и текстом */
+    pointer-events: auto !important; /* Принудительно разрешаем клики */
+    cursor: pointer !important;
   }
 }

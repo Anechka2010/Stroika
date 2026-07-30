@@ -36,7 +36,15 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+         <!-- ИСПРАВЛЕНО: Кнопка с тремя живыми линиями внутри -->
+
+  <!-- Вместо одной иконки вставляем 3 линии для гамбургера -->
+        <div class="custom-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -66,15 +74,17 @@
               src="https://img.dmclk.ru/c960x640q80/vitrina/owner/2d/2c/2d2c1f1e5f6a46cf8ca3085b4c510974.jpg"
               alt="нами построенный дом:"
             />
-            <div class="img-text ">
 
+            <div class="img-text ">
               <div class="">Строительство с гарантией</div>
             </div>
+
             <div class="img-text2">
               <div class="">Строим дома на века! Можете не беспокоиться о качестве материалов и самого дома</div>
+
               <div class="btn-group">
-                <a class="photo-btn" href="portfolio.html">Наши услуги и работы</a>
-                <a class="photo-btn-transparent" href="https://wa.me" target="_blank">Связаться</a>
+                <a class="photo-btn-transparent nav-link" href="tel:+79036906666" >+7 (903) 690-66-66</a>
+                <a class="photo-btn" href="portfolio.html">Наши работы</a>
               </div>
             </div>
           </div>
@@ -99,17 +109,18 @@
             
             <div class="social-buttons-cascade">
               <!-- 1. Телеграм -->
-            <a href="https://t.me" class="round-social-btn btn-tg" target="_blank">
+            <a href="https://t.me/argam1985sia" class="round-social-btn btn-tg" target="_blank">
              <i class="fa-brands fa-telegram"></i>
             </a>
              <!-- 2. Ватсап -->
-            <a href="https://wa.me" class="round-social-btn btn-wa" target="_blank">
+            <a href="https://wa.me/79036906666" class="round-social-btn btn-wa" target="_blank">
              <i class="fa-brands fa-whatsapp"></i>
              </a>
             <!-- 3. Макс -->
-            <a href="https://max.ru" class="round-social-btn btn-max-messenger" target="_blank">
-              <svg class="icon-max-messenger" viewBox="0 0 100 100" xmlns="http://w3.org" style="width:28px; height:28px; fill:#8a2be2;">  </svg>
-           </a>
+            <!-- 3. Кнопка с логотипом X, ведущая на max.ru -->
+            <a href="https://max.ru" class="round-social-btn btn-x-twitter" target="_blank">
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
           </div>
 
             
@@ -233,6 +244,21 @@
 
     <!-- ИСПРАВЛЕНО: Правильный скрипт Bootstrap 5, чтобы мобильное меню открывалось по клику -->
     <script src="https://jsdelivr.net"></script>
+    <!-- Этот скрипт принудительно оживит кнопку меню на любых телефонах -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var toggler = document.querySelector('.navbar-toggler');
+        var menu = document.querySelector('#navbarSupportedContent');
+        
+        if (toggler && menu) {
+          toggler.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            menu.classList.toggle('show'); // Принудительно выкатывает шторку меню
+          });
+        }
+      });
+    </script>
   </body>
 </html>
 
