@@ -902,7 +902,7 @@ body {
     flex-direction: column;
     gap: 20px;
     padding: 10px;
-    margin-top: 70px; /* Чтобы шапка navbar не перекрывала верх сайта */
+    margin-top: 0px !important; /* Чтобы шапка navbar не перекрывала верх сайта */
   }
 
   /* Каркасы контейнеров делаем на полную ширину */
@@ -927,8 +927,8 @@ body {
   /* Главная картинка дома и картинка справа подгоняются под экран */
   .img-wrapper img,
   .img-wrapper-right img {
-    width: 100% !important;
-    height: 350px !important; /* Ограничиваем высоту на мобильном, чтобы картинка не была огромной */
+    width: 90% !important;
+    height: 300px !important; /* Ограничиваем высоту на мобильном, чтобы картинка не была огромной */
     object-fit: cover; /* Картинка аккуратно обрезается, сохраняя пропорции */
   }
 
@@ -936,9 +936,10 @@ body {
   /* Заголовок "Строительство с гарантией" */
   .img-text {
     position: absolute;
-    top: 20px;
-    left: 15px;
-    font-size: 22px !important;
+    top: 30px;
+    left: 27px;
+    font-size: 20px !important;
+
     font-weight: bold;
     color: #fff;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8); /* Чтобы текст читался на любом фоне */
@@ -947,7 +948,7 @@ body {
   /* Подзаголовок и кнопки опускаем вниз картинки */
   .img-text2 {
     position: absolute;
-    bottom: 15px;
+    bottom: 10px;
     left: 15px;
     right: 15px;
   }
@@ -1027,7 +1028,7 @@ body {
   .blok-pravo-niz {
     width: 100% !important;
     float: none !important;
-    margin-top: 15px;
+    margin-top: 5px;
   }
 
   .img-wrapper-right-niz {
@@ -1039,7 +1040,7 @@ body {
 
   .img-wrapper-right-niz img {
     width: 100% !important;
-    height: 280px !important; /* Ограничиваем высоту картинки во дворе на телефоне */
+    height: 250px !important; /* Ограничиваем высоту картинки во дворе на телефоне */
     object-fit: cover;
   }
 
