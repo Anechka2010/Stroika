@@ -1018,177 +1018,177 @@ body {
     justify-content: center;
     border-radius: 50%;
   }
-}
 
-/* ==========================================================================
+  /* ==========================================================================
      МОБИЛЬНЫЕ СТИЛИ ДЛЯ БЛОКА "ЛЮБОЙ ВИД РАБОТ" И ПРЕИМУЩЕСТВ
      ========================================================================== */
 
-/* 1. Блок с брусчаткой (правый низ) */
-.blok-pravo-niz {
-  width: 100% !important;
-  float: none !important;
-  margin-top: 15px;
-}
+  /* 1. Блок с брусчаткой (правый низ) */
+  .blok-pravo-niz {
+    width: 100% !important;
+    float: none !important;
+    margin-top: 15px;
+  }
 
-.img-wrapper-right-niz {
-  height: auto !important;
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-}
+  .img-wrapper-right-niz {
+    height: auto !important;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+  }
 
-.img-wrapper-right-niz img {
-  width: 100% !important;
-  height: 280px !important; /* Ограничиваем высоту картинки во дворе на телефоне */
-  object-fit: cover;
-}
+  .img-wrapper-right-niz img {
+    width: 100% !important;
+    height: 280px !important; /* Ограничиваем высоту картинки во дворе на телефоне */
+    object-fit: cover;
+  }
 
-/* Наложение текстов на картинке с брусчаткой */
-.img-text-right-niz {
-  position: absolute;
-  top: 20px;
-  left: 15px;
-  right: 15px;
-  font-size: 20px !important;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
-}
+  /* Наложение текстов на картинке с брусчаткой */
+  .img-text-right-niz {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    right: 15px;
+    font-size: 20px !important;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+  }
 
-.img-text4 {
-  position: absolute;
-  bottom: 20px;
-  left: 15px;
-  right: 15px;
-}
+  .img-text4 {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    right: 15px;
+  }
 
-.img-text4 div {
-  font-size: 14px !important;
-  color: #fff;
-  line-height: 1.4;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
-}
+  .img-text4 div {
+    font-size: 14px !important;
+    color: #fff;
+    line-height: 1.4;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  }
 
-/* 2. Блок "Почему стоит выбрать именно нас?" */
-.steps-main-title {
-  font-size: 26px !important; /* Уменьшаем заголовок секции, чтобы он красиво смотрелся на экране телефона */
-  text-align: center;
-  margin-top: 40px !important;
-  margin-bottom: 25px !important;
-  padding: 0 15px;
-}
+  /* 2. Блок "Почему стоит выбрать именно нас?" */
+  .steps-main-title {
+    font-size: 26px !important; /* Уменьшаем заголовок секции, чтобы он красиво смотрелся на экране телефона */
+    text-align: center;
+    margin-top: 40px !important;
+    margin-bottom: 25px !important;
+    padding: 0 15px;
+  }
 
-/* Контейнер шагов перестраиваем из строки в колонку */
-.steps-container {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 20px !important; /* Делаем зазоры между карточками преимуществ */
-  padding: 0 15px !important;
-}
+  /* Контейнер шагов перестраиваем из строки в колонку */
+  .steps-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important; /* Делаем зазоры между карточками преимуществ */
+    padding: 0 15px !important;
+  }
 
-/* Каждая карточка преимущества (01, 02, 03) встает во всю ширину */
-.step-item {
-  width: 100% !important;
-  max-width: 100% !important;
-  box-sizing: border-box;
-  padding: 20px !important; /* Внутренние отступы, чтобы текст не прижимался к краям карточки */
-  text-align: center; /* Центрируем иконки и тексты для аккуратного мобильного вида */
-}
+  /* Каждая карточка преимущества (01, 02, 03) встает во всю ширину */
+  .step-item {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    padding: 20px !important; /* Внутренние отступы, чтобы текст не прижимался к краям карточки */
+    text-align: center; /* Центрируем иконки и тексты для аккуратного мобильного вида */
+  }
 
-/* Цифры 01, 02, 03 */
-.step-number {
-  font-size: 36px !important; /* Чуть уменьшаем гигантские цифры, чтобы они не перекрывали заголовки */
-  margin-bottom: 10px !important;
-  display: inline-block;
-}
+  /* Цифры 01, 02, 03 */
+  .step-number {
+    font-size: 36px !important; /* Чуть уменьшаем гигантские цифры, чтобы они не перекрывали заголовки */
+    margin-bottom: 10px !important;
+    display: inline-block;
+  }
 
-/* Маленькие заголовки (Оперативность, Гибкость...) */
-.step-title {
-  font-size: 18px !important;
-  margin-bottom: 8px !important;
-}
+  /* Маленькие заголовки (Оперативность, Гибкость...) */
+  .step-title {
+    font-size: 18px !important;
+    margin-bottom: 8px !important;
+  }
 
-/* Текст описания преимуществ */
-.step-text {
-  font-size: 15px !important;
-  line-height: 1.4 !important;
-  margin-bottom: 0 !important;
-}
-/* ==========================================================================
+  /* Текст описания преимуществ */
+  .step-text {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 0 !important;
+  }
+  /* ==========================================================================
      МОБИЛЬНЫЕ СТИЛИ ДЛЯ БЛОКА ЭТАПОВ СТРОИТЕЛЬСТВА
      ========================================================================== */
 
-/* Главный заголовок секции этапов */
-.steps-main-title0 {
-  font-size: 24px !important; /* Уменьшаем размер букв, чтобы заголовок красиво помещался в 2-3 строки */
-  text-align: center;
-  margin-top: 50px !important;
-  margin-bottom: 30px !important;
-  padding: 0 15px;
-  line-height: 1.3;
-}
+  /* Главный заголовок секции этапов */
+  .steps-main-title0 {
+    font-size: 24px !important; /* Уменьшаем размер букв, чтобы заголовок красиво помещался в 2-3 строки */
+    text-align: center;
+    margin-top: 50px !important;
+    margin-bottom: 30px !important;
+    padding: 0 15px;
+    line-height: 1.3;
+  }
 
-/* Группа карточек переходит из горизонтального ряда в вертикальный */
-.card-group0 {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 25px !important; /* Делаем зазоры между этапами, чтобы они не слипались */
-  padding: 0 15px !important;
-}
+  /* Группа карточек переходит из горизонтального ряда в вертикальный */
+  .card-group0 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 25px !important; /* Делаем зазоры между этапами, чтобы они не слипались */
+    padding: 0 15px !important;
+  }
 
-/* Каждая отдельная карточка этапа на весь экран смартфона */
-.custom-card {
-  width: 100% !important;
-  max-width: 100% !important;
-  display: flex;
-  flex-direction: column; /* Элементы внутри карточки (картинка, текст) идут сверху вниз */
-  border-radius: 12px !important; /* Красивые скругленные углы карточки */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Легкая тень для объема */
-  background-color: #fff;
-  overflow: hidden;
-  margin: 0 !important;
-}
+  /* Каждая отдельная карточка этапа на весь экран смартфона */
+  .custom-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: flex;
+    flex-direction: column; /* Элементы внутри карточки (картинка, текст) идут сверху вниз */
+    border-radius: 12px !important; /* Красивые скругленные углы карточки */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Легкая тень для объема */
+    background-color: #fff;
+    overflow: hidden;
+    margin: 0 !important;
+  }
 
-/* Обертка картинки в карточке */
-.card-img-wrapper {
-  width: 100% !important;
-  height: 200px !important; /* Фиксируем одинаковую высоту для всех картинок этапов */
-  overflow: hidden;
-}
+  /* Обертка картинки в карточке */
+  .card-img-wrapper {
+    width: 100% !important;
+    height: 200px !important; /* Фиксируем одинаковую высоту для всех картинок этапов */
+    overflow: hidden;
+  }
 
-/* Сами фотографии этапов (фундамент, коробка, контроль) */
-.card-img-wrapper img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover; /* Картинки аккуратно заполняют блок без искажения пропорций */
-}
+  /* Сами фотографии этапов (фундамент, коробка, контроль) */
+  .card-img-wrapper img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover; /* Картинки аккуратно заполняют блок без искажения пропорций */
+  }
 
-/* Текстовый блок внутри карточки */
-.custom-card .card-body {
-  padding: 20px !important;
-  text-align: left; /* Оставляем выравнивание текста по левому краю для удобства чтения */
-}
+  /* Текстовый блок внутри карточки */
+  .custom-card .card-body {
+    padding: 20px !important;
+    text-align: left; /* Оставляем выравнивание текста по левому краю для удобства чтения */
+  }
 
-/* Заголовки карточек (Фундамент, Коробка дома...) */
-.custom-card .card-title {
-  font-size: 20px !important;
-  font-weight: bold;
-  margin-bottom: 10px !important;
-}
+  /* Заголовки карточек (Фундамент, Коробка дома...) */
+  .custom-card .card-title {
+    font-size: 20px !important;
+    font-weight: bold;
+    margin-bottom: 10px !important;
+  }
 
-/* Текст описания этапа */
-.custom-card .card-text {
-  font-size: 14px !important;
-  line-height: 1.5 !important;
-  color: #555; /* Делаем цвет текста чуть мягче для лучшего восприятия */
-  margin-bottom: 0 !important;
-}
+  /* Текст описания этапа */
+  .custom-card .card-text {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #555; /* Делаем цвет текста чуть мягче для лучшего восприятия */
+    margin-bottom: 0 !important;
+  }
 
-/* Корректировка размера печатного текста на телефонах */
-#typed5 {
-  font-size: 15px !important;
-  font-weight: 500;
-  line-height: 1.4;
-  display: inline-block;
+  /* Корректировка размера печатного текста на телефонах */
+  #typed5 {
+    font-size: 15px !important;
+    font-weight: 500;
+    line-height: 1.4;
+    display: inline-block;
+  }
 }
