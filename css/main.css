@@ -827,6 +827,9 @@ body {
 /* ==========================================================================
    ПОЛНАЯ МОДЕРНИЗИРОВАННАЯ МОБИЛЬНАЯ ВЕРСИЯ САЙТА СТРОЙ ПЕРЕСЛАВЛЬ
    ========================================================================== */
+/* ==========================================================================
+   ПОЛНАЯ МОДЕРНИЗИРОВАННАЯ МОБИЛЬНАЯ ВЕРСИЯ САЙТА СТРОЙ ПЕРЕСЛАВЛЬ
+   ========================================================================== */
 
 /* --------------------------------------------------------------------------
    1. ПЛАВНОЕ МЕНЮ НА ПОЛ-ЭКРАНА И ВЫДЕЛЕНИЕ АКТИВНОЙ СТРАНИЦЫ
@@ -841,24 +844,26 @@ body {
     margin-right: 10px !important;
   }
 
-  /* Исправление бага Bootstrap: меню выезжает как плавная боковая шторка на 50% экрана */
+  /* НАМЕРТВО ПЕРЕКРЫВАЕМ СТИЛИ: Меню выезжает плавно как шторка */
   .navbar-collapse {
     position: fixed !important;
-    top: 56px !important; /* Высота вашей шапки */
-    right: -100% !important; /* Прячем за правый край экрана */
-    width: 50% !important; /* Ровно половина экрана */
+    top: 56px !important;
+    right: -100% !important;
+    width: 60% !important; /* Чуть увеличили, чтобы текст помещался */
     height: calc(100vh - 56px) !important;
     background-color: #ffffff !important;
+    background: #ffffff !important;
     padding: 20px 15px !important;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1) !important;
-    transition: right 0.4s ease-in-out !important; /* Плавное открытие */
-    display: block !important;
-    z-index: 9999 !important;
+    transition: right 0.4s ease-in-out !important;
+    display: block !important; /* Убираем display: none от Bootstrap */
+    z-index: 99999 !important; /* Поднимаем в самый верх */
   }
 
-  /* Класс, который Bootstrap добавляет при открытии меню */
+  /* Когда меню открыто (Bootstrap добавляет этот класс автоматически по клику) */
   .navbar-collapse.show {
     right: 0 !important;
+    display: block !important;
   }
 
   .navbar-nav {
@@ -867,7 +872,6 @@ body {
     gap: 12px !important;
   }
 
-  /* Базовый стиль ссылок в меню */
   .navbar-nav .nav-item .nav-link {
     text-align: center !important;
     padding: 10px 15px !important;
@@ -878,11 +882,11 @@ body {
     transition: all 0.3s ease !important;
   }
 
-  /* ВЫДЕЛЕНИЕ АКТИВНОЙ СТРАНИЦЫ ПРЯМОУГОЛЬНИКОМ С ЗАГРУГЛЕННЫМИ УГЛАМИ */
+  /* Выделение активной страницы */
   .navbar-nav .nav-item .nav-link.active {
-    background-color: #2b8a3e !important; /* Фирменный цвет выделения (замените на свой, если нужно) */
-    color: #ffffff !important; /* Белый текст */
-    border-radius: 8px !important; /* Загругленные углы */
+    background-color: #2b8a3e !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
     font-weight: bold !important;
   }
 }
@@ -891,89 +895,97 @@ body {
    2. ТРИ ПЕРВЫХ БЛОКА (МОЗАИКА КАРТИНОК)
    -------------------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
+  /* Разворачиваем абсолютно все контейнеры-родители */
   .bloki,
   .image-container,
-  .kolonka {
+  .kolonka,
+  .blok-levo,
+  .blok-pravo,
+  .blok-pravo-niz {
     width: 100% !important;
     max-width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
-    padding: 0 10px !important;
-    margin: 0 !important;
+    padding: 0 6px !important;
+    margin: 0 0 15px 0 !important;
     float: none !important;
     box-sizing: border-box !important;
+    background: transparent !important; /* Убираем серый фон родительских блоков */
+    background-color: transparent !important;
+    border-radius: 0 !important; /* Сбрасываем скругления родителей, чтобы углы картинок не ломались */
+    clip-path: none !important;
+  }
+  .blok-levo {
+    padding: 10px 6px !important;
   }
 
-  .blok-levo,
-  .blok-pravo,
-  .blok-pravo-niz,
+  /* НАМЕРТВО УБИРАЕМ ОВАЛЫ у оберток картинок */
   .img-wrapper,
   .img-wrapper-right,
   .img-wrapper-right-niz {
     width: 100% !important;
     max-width: 100% !important;
+    height: auto !important;
+    border-radius: 24px !important; /* Жёстко задаём прямоугольные скруглённые углы */
     background: transparent !important;
+    background-color: transparent !important;
+    overflow: hidden !important; /* Обрезает картинку строго по форме скругления 24px */
+    position: relative !important;
     margin: 0 0 15px 0 !important;
     padding: 0 !important;
-    float: none !important;
     box-sizing: border-box !important;
+    clip-path: none !important; /* Убираем clip-path, если он был в ПК-версии */
   }
 
-  /* НАСТРОЙКА КАРТОЧЕК */
-
-  /* Карточка 1 (Левая - Главная): Делаем её длиннее/выше */
-  .img-wrapper {
-    border-radius: 14px !important;
-  }
+  /* КАРТОЧКА 1 (Левая - Главная) */
   .img-wrapper img {
     width: 100% !important;
-    height: 390px !important; /* Увеличили высоту, блок стал подлиннее */
+    height: 400px !important; /* Делаем первый блок длиннее */
     object-fit: cover !important;
+    border-radius: 24px !important; /* Дублируем скругление для самой картинки */
   }
 
-  /* Текст на Карточке 1: Главный текст побольше */
   .img-text {
     position: absolute !important;
-    top: 20px !important;
-    left: 15px !important;
-    right: 15px !important;
-    font-size: 24px !important; /* Сделали главный текст побольше чуть-чуть */
+    top: 25px !important;
+    left: 20px !important;
+    right: 20px !important;
+    font-size: 25px !important; /* Главный текст побольше чуть-чуть */
     font-weight: bold !important;
     color: #fff !important;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9) !important;
     z-index: 2 !important;
   }
 
-  /* Нижний текст на Карточке 1 */
   .img-text2 {
     position: absolute !important;
-    bottom: 15px !important;
-    left: 15px !important;
-    right: 15px !important;
+    bottom: 20px !important;
+    left: 20px !important;
+    right: 20px !important;
     z-index: 2 !important;
   }
   .img-text2 div:first-child {
-    font-size: 14px !important;
+    font-size: 15px !important;
     color: #fff !important;
     margin-bottom: 5px !important; /* Меньше отступ снизу от нижнего текста */
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8) !important;
-    line-height: 1.3 !important;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9) !important;
+    line-height: 1.4 !important;
   }
 
-  /* ОВАЛЬНЫЕ КНОПКИ под нижним текстом */
+  /* Овальные капсульные кнопки ниже текста */
   .img-text2 .btn-group {
     display: flex !important;
     flex-direction: column !important;
-    gap: 8px !important;
+    gap: 10px !important;
     width: 100% !important;
-    margin-top: 5px !important; /* Позиция чуть ниже нижнего текста */
+    margin-top: 10px !important; /* Сместили чуть ниже нижнего текста */
   }
   .photo-btn,
   .photo-btn-transparent {
     width: 100% !important;
     text-align: center !important;
-    padding: 10px 0 !important;
-    font-size: 14px !important;
+    padding: 12px 0 !important;
+    font-size: 15px !important;
     border-radius: 50px !important; /* ИДЕАЛЬНО ОВАЛЬНЫЕ КНОПКИ */
     display: block !important;
   }
@@ -983,87 +995,89 @@ body {
     color: #fff !important;
   }
 
-  /* Карточка 2 (Правая верхняя): Светлее, ниже по высоте, углы еще скругленнее */
+  /* КАРТОЧКА 2 (Правая верхняя) */
   .img-wrapper-right {
-    border-radius: 20px !important; /* Еще скругленнее углы */
+    border-radius: 28px !important; /* Скругление углов ещё больше */
   }
   .img-wrapper-right img {
     width: 100% !important;
-    height: 240px !important; /* Уменьшили высоту блока */
+    height: 230px !important; /* Меньше по высоте */
     object-fit: cover !important;
-    filter: brightness(1.15) !important; /* Сделали сам блок чуть посветлее */
+    border-radius: 28px !important;
+    filter: brightness(1.2) !important; /* Делаем блок чуть посветлее */
   }
 
   .img-text-right {
     position: absolute !important;
-    top: 15px !important;
-    left: 15px !important;
-    right: 15px !important;
-    font-size: 19px !important; /* Главный текст чуть больше */
+    top: 20px !important;
+    left: 20px !important;
+    right: 20px !important;
+    font-size: 20px !important;
     font-weight: bold !important;
     color: #fff !important;
     z-index: 2 !important;
   }
 
-  /* Текст Typed поближе к названию */
+  /* Текст typed поближе к названию */
   .img-text3 {
     position: absolute !important;
-    top: 75px !important; /* Подтянули выше, ближе к названию */
-    left: 15px !important;
-    right: 15px !important;
+    top: 80px !important; /* Подтянули выше к названию */
+    left: 20px !important;
+    right: 20px !important;
     z-index: 2 !important;
   }
   #typed5 {
-    font-size: 15px !important;
+    font-size: 16px !important;
     font-weight: 500 !important;
   }
 
-  /* ТРИ ИКОНКИ КОНТАКТОВ: ближе друг к другу и с правой стороны */
+  /* Иконки контактов ближе друг к другу и СПРАВА */
   .social-buttons-cascade {
     position: absolute !important;
-    bottom: 15px !important;
-    right: 15px !important; /* С правой стороны блока */
-    left: auto !important; /* Отменяем левое позиционирование */
+    bottom: 20px !important;
+    right: 20px !important; /* Прижали к правому краю */
+    left: auto !important;
     display: flex !important;
     flex-direction: row !important;
     gap: 8px !important; /* Сделали ближе друг к другу */
     z-index: 2 !important;
   }
   .round-social-btn {
-    width: 38px !important;
-    height: 38px !important;
+    width: 40px !important;
+    height: 40px !important;
     border-radius: 50% !important;
   }
 
-  /* Карточка 3 (Правая нижняя - Брусчатка): Как и вторая - ниже и скругленнее */
+  /* КАРТОЧКА 3 (Правая нижняя) */
   .img-wrapper-right-niz {
-    border-radius: 20px !important; /* Еще скругленнее углы как у второго */
+    border-radius: 28px !important; /* Скругление углов как у второй карточки */
   }
   .img-wrapper-right-niz img {
     width: 100% !important;
-    height: 240px !important; /* Такой же поменьше как второй блок */
+    height: 230px !important; /* По высоте меньше, как и вторая */
     object-fit: cover !important;
+    border-radius: 28px !important;
   }
   .img-text-right-niz {
     position: absolute !important;
-    top: 15px !important;
-    left: 15px !important;
-    font-size: 19px !important; /* Главный текст побольше */
+    top: 20px !important;
+    left: 20px !important;
+    font-size: 20px !important;
     z-index: 2 !important;
   }
 
   /* Нижний текст поближе к названию */
   .img-text4 {
     position: absolute !important;
-    top: 75px !important; /* Сместили наверх, поближе к названию */
+    top: 80px !important; /* Сместили повыше, поближе к названию */
     bottom: auto !important;
-    left: 15px !important;
-    right: 15px !important;
+    left: 20px !important;
+    right: 20px !important;
     z-index: 2 !important;
   }
   .img-text4 div {
-    font-size: 14px !important;
-    line-height: 1.3 !important;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
   }
 
   /* Красивое общее напыление на картинки для читаемости текста */
@@ -1078,7 +1092,7 @@ body {
     bottom: 0;
     background: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0.1) 50%,
       rgba(0, 0, 0, 0.6) 100%
     ) !important;
@@ -1090,18 +1104,18 @@ body {
    3. БЛОК "ПОЧЕМУ СТОИТ ВЫБРАТЬ ИМЕННО НАС?" (ШАГИ)
    -------------------------------------------------------------------------- */
   .steps-main-title {
-    font-size: 25px !important;
+    font-size: 26px !important;
     text-align: center !important;
-    margin-top: 35px !important;
-    margin-bottom: 25px !important;
+    margin-top: 40px !important;
+    margin-bottom: 30px !important;
   }
 
   .steps-container {
     display: flex !important;
     flex-direction: column !important;
-    gap: 25px !important;
+    gap: 30px !important;
     padding: 0 15px !important;
-    margin-bottom: 55px !important; /* Увеличили нижний отступ, чтобы карточки ниже были дальше */
+    margin-bottom: 65px !important; /* Увеличенный отступ снизу, чтобы карточки были дальше */
   }
 
   .step-item {
@@ -1112,69 +1126,80 @@ body {
 
   /* ИЗЫСКАННЫЕ ЦИФРЫ В КРУЖОЧКЕ С БЕЛЫМ ТЕКСТОМ */
   .step-number {
-    font-size: 18px !important; /* Аккуратный размер шрифта */
+    font-size: 18px !important;
     font-weight: bold !important;
     color: #ffffff !important; /* Белые цифры */
-    background-color: #2b8a3e !important; /* Цвет кружочка (можно заменить под стиль) */
-    width: 46px !important;
-    height: 46px !important;
+    background-color: #2b8a3e !important; /* Цвет кружочка */
+    width: 48px !important;
+    height: 48px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    border-radius: 50% !important; /* Превращаем в кружочек */
-    margin: 0 auto 12px auto !important; /* Центрируем кружок */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15) !important; /* Легкая изысканная тень кружка */
+    border-radius: 50% !important; /* Кружочек */
+    margin: 0 auto 12px auto !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
   }
 
   .step-title {
-    font-size: 20px !important; /* Заголовки шагов побольше */
+    font-size: 21px !important; /* Заголовки шагов побольше */
     font-weight: bold !important;
   }
 
   .step-text {
-    font-size: 16px !important; /* Текст снизу под цифрами сделали побольше */
+    font-size: 16px !important; /* Текст снизу побольше */
     line-height: 1.4 !important;
   }
-
-  /* --------------------------------------------------------------------------
-   4. БЛОК КАРТОЧЕК СНИЗУ ("ОТ ЗАКЛАДКИ ПЕРВОГО КАМНЯ...")
-   -------------------------------------------------------------------------- */
+  /* --------------------------------------------------------------------------4. БЛОК КАРТОЧЕК СНИЗУ ("ОТ ЗАКЛАДКИ ПЕРВОГО КАМНЯ...")-------------------------------------------------------------------------- */
   .steps-main-title0 {
-    font-size: 24px !important;
+    font-size: 25px !important;
     text-align: center !important;
-    margin-top: 30px !important; /* Крупный отступ сверху от блока шагов */
-    margin-bottom: 25px !important;
+    margin-top: 35px !important;
+    margin-bottom: 30px !important;
   }
   .card-group0 {
     display: flex !important;
     flex-direction: column !important;
-    gap: 30px !important; /* Карточки стоят дальше друг от друга */
+    gap: 35px !important;
+    /* Карточки стоят дальше друг от друга */
     padding: 0 15px !important;
   }
   .custom-card {
     width: 100% !important;
-    border-radius: 14px !important; /* УВЕЛИЧИЛИ ТЕНЬ ДЛЯ БОЛЬШЕГО ОБЪЕМА */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12) !important;
+    border-radius: 16px !important;
+    /* УВЕЛИЧИЛИ ТЕНЬ ДЛЯ БОЛЬШЕГО ОБЪЕМА */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15) !important;
     background-color: #fff !important;
     overflow: hidden !important;
     margin: 0 !important;
   }
   .card-img-wrapper {
     width: 100% !important;
-    height: 210px !important;
+    height: 220px !important;
   }
   .custom-card .card-body {
-    padding: 22px !important;
+    padding: 24px !important;
   }
-  /* Текст на нижних карточках сделали больше /.custom-card .card-title {font-size: 21px !important; / Заголовок карточки больше */
   .custom-card .card-title {
-    font-size: 21px;
+    font-size: 22px !important;
+    /* Текст заголовка больше */
     font-weight: bold !important;
-    margin-bottom: 10px !important;
+    margin-bottom: 12px !important;
   }
   .custom-card .card-text {
-    font-size: 16px !important; /* Описание этапа больше */
+    font-size: 16px !important;
+    /* Текст описания больше */
     line-height: 1.5 !important;
     color: #444 !important;
+  }
+  /* Убираем подчеркивание у всех кнопок-ссылок на сайте */
+  .photo-btn,
+  .photo-btn-transparent,
+  .nav-link,
+  a[class*="-btn"] {
+    text-decoration: none !important; /* Намертво убирает нижнюю полосу */
+  }
+  .photo-btn:hover,
+  .photo-btn-transparent:hover {
+    text-decoration: none !important;
   }
 }
