@@ -872,3 +872,76 @@ body {
 .photo-btn-transparent {
   text-decoration: none !important;
 }
+
+/* Специальные стили для мобильных телефонов */
+@media screen and (max-width: 768px) {
+  /* 1. Навигация и Шапка сайта */
+  header,
+  nav {
+    flex-direction: column; /* Элементы меню встают друг под друга */
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  nav a {
+    margin: 8px 0; /* Делаем ссылки крупнее с отступами, чтобы удобно кликать пальцем */
+    display: block;
+    font-size: 18px;
+  }
+
+  /* 2. Главный баннер (Первый экран) */
+  .hero-section,
+  .main-banner {
+    padding: 40px 15px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 28px !important; /* Уменьшаем гигантский шрифт заголовка, чтобы он не переносился по одной букве */
+    line-height: 1.3;
+  }
+
+  /* 3. Кнопки действия (Наши услуги, Связаться) */
+  .buttons-container,
+  .btn-group {
+    display: flex;
+    flex-direction: column; /* Кнопки встают вертикально */
+    gap: 12px;
+    width: 100%;
+  }
+
+  button,
+  .button,
+  .btn {
+    width: 100%; /* Каждая кнопка растягивается на всю ширину экрана смартфона */
+    padding: 14px;
+    font-size: 16px;
+  }
+
+  /* 4. Сетка преимуществ и карточки этапов (Фундамент, Коробка, Контроль) */
+  .advantages-grid,
+  .steps-container,
+  .row,
+  .grid {
+    display: flex;
+    flex-direction: column; /* Отменяем горизонтальные колонки, выстраиваем в одну линию */
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .card,
+  .step-block,
+  .col-4,
+  .col-6 {
+    width: 100% !important; /* Каждая карточка занимает 100% ширины телефона */
+    margin: 0 0 15px 0;
+    box-sizing: border-box;
+  }
+
+  /* 5. Картинки (например, фото построенного дома) */
+  img {
+    width: 100%;
+    height: auto; /* Картинки автоматически сжимаются под экран телефона и не вылезают за границы */
+    border-radius: 8px;
+  }
+}
