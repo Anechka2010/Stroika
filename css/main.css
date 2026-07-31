@@ -2,7 +2,6 @@
 
 .bloki {
   display: flex;
-
 }
 
 .blok-levo {
@@ -12,14 +11,14 @@
 
 .blok-levo img {
   border-radius: 100px;
-  width: 850px;
+  width: 790px;
   max-width: 100%;
   height: auto;
 }
 
 .img-wrapper {
   position: relative;
-
+  top: -10px;
   border-radius: 100px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0.75, 0, 0.75) !important;
@@ -35,7 +34,7 @@
   background: linear-gradient(
     to bottom right,
     rgba(0, 0.3, 0, 0.65),
-    transparent 
+    transparent
   ) !important;
   pointer-events: none;
   z-index: 1;
@@ -89,7 +88,6 @@
   box-shadow: 0 4px 12px rgba(0, 0.7, 0, 0.7);
 }
 
-
 .img-wrapper-right::after {
   content: "";
   position: absolute;
@@ -100,7 +98,7 @@
   background: linear-gradient(
     to bottom right,
     rgba(0, 0.4, 0, 0.1),
-    transparent 
+    transparent
   );
   pointer-events: none;
   z-index: 1;
@@ -141,7 +139,7 @@
 
 .img-wrapper-right-niz {
   position: relative;
-  
+
   border-radius: 50px;
   overflow: hidden;
   margin-top: 15px;
@@ -168,7 +166,7 @@
   background: linear-gradient(
     to bottom right,
     rgba(0, 0.9, 0, 0.8),
-    transparent 
+    transparent
   );
   pointer-events: none;
   z-index: 1;
@@ -222,8 +220,8 @@
 
 .photo-btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 30px;
+  margin-top: 10px;
+  padding: 15px 40px;
   background-color: #ffffff;
   color: #300114;
   border: none;
@@ -260,9 +258,8 @@
 }
 
 .photo-btn-transparent {
- 
-  width: 130px !important;
-  padding: 10px 0 !important;
+  width: 190px !important;
+  padding: 15px 0 !important;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.15);
   color: #ffffff;
@@ -302,7 +299,7 @@ nav ul li a.active {
   font-weight: 700 !important;
   padding: 8px 16px !important;
   border-radius: 8px !important;
-  border-bottom: none !important; 
+  border-bottom: none !important;
 
   pointer-events: none !important;
   transform: none !important;
@@ -312,19 +309,19 @@ nav ul li a.active {
 nav ul li a:not(.active):not(.btn)::after {
   content: "";
   position: absolute;
-  bottom: -2.5px; 
-  left: 50%; 
-  transform: translateX(-50%)  scaleX(0); 
+  bottom: -2.5px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
 
-  width: 60px; 
-  height: 3px; 
-  background-color: #d2b48c; 
+  width: 60px;
+  height: 3px;
+  background-color: #d2b48c;
 
   transition: transform 0.45s ease-in-out;
 }
 
 nav ul li a:not(.active):not(.btn):hover::after {
-  transform: translateX(-50%)  scaleX(1); 
+  transform: translateX(-50%) scaleX(1);
 }
 
 .navbar-nav {
@@ -517,7 +514,7 @@ body {
 }
 .btn-wa i {
   color: #25d366;
-    z-index: 2;
+  z-index: 2;
 }
 
 .btn-tg {
@@ -526,7 +523,7 @@ body {
 
 .btn-max-messenger {
   z-index: 3;
-} 
+}
 
 .round-social-btn:hover {
   transform: translateY(-5px) scale(1.1);
@@ -574,7 +571,17 @@ body {
 .block-garazhi {
   height: 340px;
 }
-
+.block-otdelka .carousel-control-prev,
+.block-otdelka .carousel-control-next {
+  display: flex !important;
+  pointer-events: auto !important;
+}
+.block-besedki .glass-stars-wrapper {
+  position: absolute !important;
+  bottom: auto !important;
+  top: 20px !important;
+  right: 20px !important;
+}
 .block-besedki {
   height: 290px;
 }
@@ -609,12 +616,11 @@ body {
   transition: box-shadow 0.4s ease;
 }
 
-
 .bento-item img {
   object-fit: cover;
   filter: grayscale(30%) brightness(85%);
 
-  will-change: filter; 
+  will-change: filter;
 }
 
 /* ======================================================= */
@@ -643,7 +649,7 @@ body {
   font-size: 24px;
   letter-spacing: 0.5px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-  pointer-events: none;
+  pointer-events: none !important;
 }
 
 .title-top {
@@ -671,22 +677,27 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 5;
-  transition: all 0.3s ease;
+  z-index: 100;
   opacity: 0.75;
   pointer-events: auto !important;
+  transition: all 0.3s ease;
 }
-
 
 .bento-arrow.prev {
+  position: absolute;
+  z-index: 100;
   top: 50%;
+  left: 20px !important;
   transform: translateY(-50%);
-  left: 15px;
+  right: auto !important;
 }
 .bento-arrow.next {
+  position: absolute;
+  z-index: 100;
   top: 50%;
+  right: 20px !important;
   transform: translateY(-50%);
-  right: 15px;
+  left: auto !important;
 }
 
 .bento-arrow:hover {
@@ -722,7 +733,7 @@ body {
 
 .btn-x-twitter {
   background-color: #ffffff !important;
-  color: #300114 !important; 
+  color: #300114 !important;
 }
 
 .btn-x-twitter i {
@@ -730,60 +741,91 @@ body {
 }
 
 .carousel-item {
-  
-  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out !important;
+  transition:
+    transform 0.8s ease-in-out,
+    opacity 0.8s ease-in-out !important;
 }
-
 
 .carousel-fade .carousel-item {
   opacity: 0 !important;
   transition-property: opacity !important;
-  transition-duration: 0.8s !important; 
+  transition-duration: 0.8s !important;
 }
 
 .carousel-fade .carousel-item.active {
   opacity: 1 !important;
 }
+
+/* 1. Включаем отображение и кликабельность для ВСЕХ видов стрелок портфолио */
+.bento-arrow,
+button.bento-arrow,
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 9999 !important;
+  pointer-events: auto !important; /* РАЗРЕШАЕМ КЛИКИ ПАЛЬЦЕМ И МЫШКОЙ */
+  cursor: pointer !important;
+  display: flex !important;
+}
+
+/* 2. Левые стрелки строго влево */
+.prev,
+.carousel-control-prev,
+[onclick*="-1"] {
+  left: 15px !important;
+  right: auto !important;
+}
+
+/* 3. Правые стрелки строго вправо */
+.next,
+.carousel-control-next,
+[onclick*="1"] {
+  right: 15px !important;
+  left: auto !important;
+}
+
 /* ==========================================================================
    ПОЛНАЯ МОДЕРНИЗИРОВАННАЯ МОБИЛЬНАЯ ВЕРСИЯ САЙТА СТРОЙ ПЕРЕСЛАВЛЬ
    ========================================================================== */
 
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
+@media screen and (min-width: 0px) and (max-width: 991px) {
+  html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
 
-.photo-btn,
-.photo-btn-transparent,
-.nav-link,
-a[class*="-btn"] {
-  text-decoration: none !important;
-}
-.photo-btn:hover,
-.photo-btn-transparent:hover {
-  text-decoration: none !important;
-}
+  .photo-btn,
+  .photo-btn-transparent,
+  .nav-link,
+  a[class*="-btn"] {
+    text-decoration: none !important;
+  }
+  .photo-btn:hover,
+  .photo-btn-transparent:hover {
+    text-decoration: none !important;
+  }
 
-.navbar .container-fluid,
-.bloki {
-  margin-inline: 0 !important;
-  padding-inline: 10px !important;
-}
+  .navbar .container-fluid,
+  .bloki {
+    margin-inline: 0 !important;
+    padding-inline: 10px !important;
+  }
 
-@media screen and (max-width: 991px) {
   .navbar-brand.logo {
     font-size: 20px !important;
   }
@@ -880,7 +922,6 @@ a[class*="-btn"] {
     max-width: 100% !important;
     height: auto !important;
   }
-
   .bloki,
   .image-container,
   .kolonka,
@@ -1054,8 +1095,7 @@ a[class*="-btn"] {
   .steps-container,
   .step-item,
   main,
-  section,
-  div[class*="col-"] {
+  section {
     border: none !important;
     box-shadow: none !important;
   }
@@ -1160,10 +1200,15 @@ a[class*="-btn"] {
     grid-template-columns: 1fr !important;
     gap: 20px !important;
     padding: 0 15px !important;
-    margin-top: 80px !important;
+    margin-top: 15px !important;
     width: 100% !important;
     max-width: 100% !important;
   }
+
+  div.bento-column.col-1 {
+    margin-top: 90px !important;
+  }
+
   .bento-item,
   .block-bruschatka,
   .block-garazhi,
@@ -1198,7 +1243,7 @@ a[class*="-btn"] {
   .bento-item:first-child img,
   .bento-item:first-child .carousel-item img {
     min-height: 420px !important;
-  } 
+  }
   .bento-arrow,
   button.bento-arrow,
   .bento-item .arrow,
@@ -1215,28 +1260,47 @@ a[class*="-btn"] {
     background-color: rgba(0, 0, 0, 0.4) !important;
     border-radius: 50% !important;
   }
+
   .block-garazhi h3,
   .block-garazhi .block-title {
     top: 20px !important;
     bottom: auto !important;
-  } 
+  }
   .block-besedki .bento-title-layer.title-bottom {
     position: absolute !important;
-    top: auto !important;
+    top: 325px !important;
     bottom: 25px !important;
     left: 20px !important;
     right: 20px !important;
     pointer-events: none !important;
   }
-  .block-besedki .glass-stars-wrapper,
-  .block-besedki .bento-stars {
-    position: absolute !important;
-    top: 20px !important;
+
+  .bento-stars {
+    color: #ffcc00;
+    font-size: 25px;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 8px rgba(255, 204, 0, 0.6);
+    margin-top: -8px !important;
     bottom: auto !important;
     left: 20px !important;
     right: auto !important;
     display: flex !important;
     z-index: 5 !important;
+    background: transparent !important;
+  }
+  .glass-stars-wrapper {
+    position: absolute;
+    top: 100px !important;
+    left: 50px !important;
+    z-index: 4;
+    padding: 10px 30px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+    width: max-content;
     background: transparent !important;
   }
   .carousel-control-prev,
@@ -1276,9 +1340,9 @@ a[class*="-btn"] {
   .bento-item .bento-title-layer,
   .bento-item .img-text {
     position: absolute !important;
-    top: 20px !important;
+    top: 25px !important;
     bottom: auto !important;
-    left: 20px !important;
+    left: 30px !important;
     right: 20px !important;
     z-index: 5 !important;
     color: #ffffff !important;
@@ -1299,7 +1363,7 @@ a[class*="-btn"] {
     width: 40px !important;
     height: 40px !important;
     border-radius: 50% !important;
-    background: rgba(0, 0, 0, 0.7) !important;
+    background: rgba(0, 0, 0, 0.2) !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
     display: flex !important;
     align-items: center !important;
@@ -1317,24 +1381,34 @@ a[class*="-btn"] {
     fill: #fff !important;
     font-size: 16px !important;
   }
-  .bento-item .prev,
-  button.bento-arrow.prev,
+
+  /* 1. Включаем отображение и кликабельность для ВСЕХ видов стрелок портфолио */
+  .bento-arrow,
+  button.bento-arrow,
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 5 !important;
+    pointer-events: auto !important; /* РАЗРЕШАЕМ КЛИКИ ПАЛЬЦЕМ И МЫШКОЙ */
+    cursor: pointer !important;
+    display: flex !important;
+  }
+
+  /* 2. Левые стрелки строго влево */
+  .prev,
   .carousel-control-prev,
   [onclick*="-1"] {
-    top: 50% !important;
-    bottom: auto !important;
     left: 15px !important;
     right: auto !important;
   }
 
-  .bento-item .next,
-  button.bento-arrow.next,
+  /* 3. Правые стрелки строго вправо */
+  .next,
   .carousel-control-next,
   [onclick*="1"] {
-    top: 50% !important;
-    bottom: auto !important;
-    right: 15px !important; 
+    right: 15px !important;
     left: auto !important;
   }
-}
 }
