@@ -1,21 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
 
-/* Глобальные правила для предотвращения горизонтальной прокрутки */
-html,
-body {
-  max-width: 100% !important;
-  overflow-x: hidden !important;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: inherit; /* Заставляет все элементы правильно считать свою ширину с учетом отступов */
-}
-
 .bloki {
   display: flex;
-  flex: 1;
+
 }
 
 .blok-levo {
@@ -32,7 +19,7 @@ body {
 
 .img-wrapper {
   position: relative;
-  display: inline-block;
+
   border-radius: 100px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0.75, 0, 0.75) !important;
@@ -48,7 +35,7 @@ body {
   background: linear-gradient(
     to bottom right,
     rgba(0, 0.3, 0, 0.65),
-    transparent 75%
+    transparent 
   ) !important;
   pointer-events: none;
   z-index: 1;
@@ -86,7 +73,6 @@ body {
   font-weight: 100 !important;
 }
 
-/* ОБЪЕДИНИЛИ И ОЧИСТИЛИ СТИЛИ ДЛЯ КАРТИНКИ ПРАВОГО БЛОКА */
 .blok-pravo img {
   border-radius: 50px;
   width: 500px;
@@ -97,19 +83,12 @@ body {
 
 .img-wrapper-right {
   position: relative;
-  display: inline-block;
   border-radius: 50px;
   overflow: hidden;
   margin-top: 45px;
   box-shadow: 0 4px 12px rgba(0, 0.7, 0, 0.7);
 }
 
-.blok-pravo img {
-  border-radius: 50px;
-  width: 500px;
-  height: 250px;
-  position: relative;
-}
 
 .img-wrapper-right::after {
   content: "";
@@ -121,65 +100,7 @@ body {
   background: linear-gradient(
     to bottom right,
     rgba(0, 0.4, 0, 0.1),
-    transparent 75%
-  );
-  pointer-events: none;
-  z-index: 1;
-}
-
-.img-text-right {
-  position: absolute;
-  top: 50px;
-  left: 45px;
-  z-index: 2;
-  color: #ffffff;
-  max-width: 80%;
-  font-family: "Montserrat" !important;
-  font-size: 30px;
-  line-height: 1.3;
-  font-weight: 800;
-}
-
-.img-text-right * {
-  margin: 0;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-.img-text3 {
-  position: absolute;
-  top: 150px;
-  left: 45px;
-  z-index: 2;
-  color: #ffffff;
-  max-width: 50%;
-  font-family: "Montserrat", sans-serif !important;
-  font-size: 18px;
-  line-height: 1.3;
-  font-weight: 100 !important;
-}
-
-.img-wrapper-right {
-  position: relative;
-  display: inline-block;
-  border-radius: 50px;
-  overflow: hidden;
-  margin-top: 45px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0.7, 0, 0.7);
-}
-
-.img-wrapper-right::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom right,
-    rgba(0, 0.4, 0, 0.1),
-    transparent 75%
+    transparent 
   );
   pointer-events: none;
   z-index: 1;
@@ -220,7 +141,7 @@ body {
 
 .img-wrapper-right-niz {
   position: relative;
-  display: inline-block;
+  
   border-radius: 50px;
   overflow: hidden;
   margin-top: 15px;
@@ -247,7 +168,7 @@ body {
   background: linear-gradient(
     to bottom right,
     rgba(0, 0.9, 0, 0.8),
-    transparent 80%
+    transparent 
   );
   pointer-events: none;
   z-index: 1;
@@ -296,7 +217,6 @@ body {
 }
 
 .svet {
-  background-image: none !important;
   background-color: #fff8dc !important;
 }
 
@@ -340,7 +260,7 @@ body {
 }
 
 .photo-btn-transparent {
-  display: block !important;
+ 
   width: 130px !important;
   padding: 10px 0 !important;
   text-align: center;
@@ -357,7 +277,6 @@ body {
     transform 0.3s ease;
 }
 
-/* Эффект при наведении на полупрозрачную кнопку */
 .photo-btn-transparent:hover {
   background-color: #ffffff;
   color: #000000;
@@ -365,12 +284,10 @@ body {
   transform: translateY(-2px);
 }
 
-/* Эффект при клике */
 .photo-btn-transparent:active {
   transform: translateY(0);
 }
 
-/* Навигация и ссылки */
 nav ul li {
   padding-left: 8px;
   padding-right: 8px;
@@ -379,16 +296,14 @@ nav ul li a:not(.active):not(.btn):hover {
   transform: translateY(-1.5px);
 }
 
-/* ИСПРАВЛЕНО: Убрали пробел перед .active, чтобы цвет активной вкладки сработал */
 nav ul li a.active {
   background-color: #d2b48c !important;
   color: #ffffff !important;
   font-weight: 700 !important;
   padding: 8px 16px !important;
   border-radius: 8px !important;
-  border-bottom: none !important; /* Убираем прошлые полоски, если они были */
+  border-bottom: none !important; 
 
-  /* ИГНОРИРОВАНИЕ МЫШИ: плашка не реагирует на наведение и клики */
   pointer-events: none !important;
   transform: none !important;
   box-shadow: none !important;
@@ -397,29 +312,25 @@ nav ul li a.active {
 nav ul li a:not(.active):not(.btn)::after {
   content: "";
   position: absolute;
-  bottom: -2.5px; /* Расстояние от текста до полоски */
-  left: 50%; /* Сдвигаем к центру */
-  transform: translateX(-50%) scaleX(0); /* Центрируем и изначально сжимаем в точку */
+  bottom: -2.5px; 
+  left: 50%; 
+  transform: translateX(-50%)  scaleX(0); 
 
-  /* НАСТРОЙКА ДЛИНЫ И ТОЛЩИНЫ ЛИНИИ */
-  width: 60px; /* Задайте любую длину полоски (например, 30px или 50%) */
-  height: 3px; /* Толщина линии */
-  background-color: #d2b48c; /* Ваш фирменный цвет */
+  width: 60px; 
+  height: 3px; 
+  background-color: #d2b48c; 
 
-  transition: transform 0.45s ease-in-out; /* Плавное появление */
+  transition: transform 0.45s ease-in-out;
 }
 
-/* Эффект при наведении: полоска красиво разъезжается из центра */
 nav ul li a:not(.active):not(.btn):hover::after {
-  transform: translateX(-50%) scaleX(1); /* Полоска становится полноценной длины */
+  transform: translateX(-50%)  scaleX(1); 
 }
 
-/* На всякий случай выравниваем соседние ссылки по центру высоты навибара */
 .navbar-nav {
   align-items: center;
 }
 
-/* Сетка карточек */
 .card-group0 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -451,7 +362,6 @@ nav ul li a:not(.active):not(.btn):hover::after {
   overflow: hidden;
 }
 
-/* Картинки и текст карточек */
 .custom-card img {
   width: 100%;
   height: 100%;
@@ -488,7 +398,6 @@ nav ul li a:not(.active):not(.btn):hover::after {
   text-align: center;
 }
 
-/* Секция шагов (Этапы) */
 .steps-container {
   display: flex;
   justify-content: space-between;
@@ -538,7 +447,6 @@ nav ul li a:not(.active):not(.btn):hover::after {
   margin: 0;
 }
 
-/* Главный заголовок этапов */
 .steps-main-title {
   font-family: "Montserrat" !important;
   font-weight: 900;
@@ -569,7 +477,6 @@ body {
   padding-top: 60px;
 }
 
-/* Каскад кнопок соцсетей */
 .social-buttons-cascade {
   position: absolute;
   bottom: 25px;
@@ -610,17 +517,16 @@ body {
 }
 .btn-wa i {
   color: #25d366;
+    z-index: 2;
 }
 
 .btn-tg {
   z-index: 1;
 }
-.btn-wa {
-  z-index: 2;
-}
+
 .btn-max-messenger {
   z-index: 3;
-} /* Обновили имя класса под ваш SVG-вариант мессенджера MAX */
+} 
 
 .round-social-btn:hover {
   transform: translateY(-5px) scale(1.1);
@@ -634,7 +540,6 @@ body {
   transform: rotate(8deg);
 }
 
-/* Каркас Bento-галереи */
 .bento-gallery {
   display: flex;
   gap: 24px;
@@ -660,7 +565,6 @@ body {
   flex: 1;
 }
 
-/* Высоты первой и второй колонки */
 .block-doma {
   height: 555px;
 }
@@ -671,7 +575,6 @@ body {
   height: 340px;
 }
 
-/* Высоты правой колонки по вашему чертежу */
 .block-besedki {
   height: 290px;
 }
@@ -681,10 +584,9 @@ body {
 /* ==========================================================================
    ПЛАВНАЯ СМЕНА ФОТО ДЛЯ БЕНТО-ГАЛЕРЕИ НА НОУТБУКЕ
    ========================================================================== */
-/* Мягкое скольжение картинок в бенто-галерее (вместо вспышки) */
+
 .bento-item .carousel-inner {
   display: flex !important;
-  /* Плавный сдвиг всей ленты картинок за 0.5 секунды */
   transition: transform 0.3s ease-in-out !important;
 }
 
@@ -707,19 +609,12 @@ body {
   transition: box-shadow 0.4s ease;
 }
 
-.carousel-inner,
-.carousel-item,
-.bento-item img {
-  width: 100%;
-  height: 100%;
-}
 
-/* Исходное состояние картинок (Приглушенный кино-монохром) */
 .bento-item img {
   object-fit: cover;
   filter: grayscale(30%) brightness(85%);
-  transition: filter 0.5s ease;
-  will-change: filter; /* Задействуем видеокарту для супер-плавного проявления цвета */
+
+  will-change: filter; 
 }
 
 /* ======================================================= */
@@ -777,15 +672,12 @@ body {
   align-items: center;
   justify-content: center;
   z-index: 5;
-  transition:
-    opacity 0.3s,
-    background-color 0.3s,
-    color 0.3s ease; /* Оптимизировали переход */
+  transition: all 0.3s ease;
   opacity: 0.75;
   pointer-events: auto !important;
 }
 
-/* Горизонтальный ход стрелок */
+
 .bento-arrow.prev {
   top: 50%;
   transform: translateY(-50%);
@@ -797,22 +689,10 @@ body {
   right: 15px;
 }
 
-/* Вертикальный ход стрелок (Строго для Гаражей) */
-.bento-arrow.arrow-up {
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.bento-arrow.arrow-down {
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .bento-arrow:hover {
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.45) !important;
-  color: #000000;
+  color: #000000 !important;
 }
 
 /* ======================================================= */
@@ -840,40 +720,25 @@ body {
   text-shadow: 0 2px 8px rgba(255, 204, 0, 0.4);
 }
 
-/* Стили для новой кнопки X */
 .btn-x-twitter {
-  background-color: #ffffff !important; /* Черный фон для логотипа X */
-  color: #300114 !important; /* Белый цвет самой иконки */
+  background-color: #ffffff !important;
+  color: #300114 !important; 
 }
 
 .btn-x-twitter i {
-  font-size: 18px !important; /* Комфортный размер иконки внутри кружка */
+  font-size: 18px !important;
 }
 
-/* Делаем переключение слайдов карусели плавным на ноутбуках */
 .carousel-item {
-  /* Изменяем время перехода. 0.8s — это скорость анимации (почти секунда). 
-     Можете поставить 1.2s, чтобы сделать перелистывание еще более тягучим */
-  transition:
-    transform 0.8s ease-in-out,
-    opacity 0.8s ease-in-out !important;
+  
+  transition: transform 0.8s ease-in-out, opacity 0.8s ease-in-out !important;
 }
 
-/* Если используете эффект растворения carousel-fade, настраиваем и его скорость */
-.carousel-fade .carousel-item {
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: 0.8s !important; /* Время плавного растворения */
-}
 
-.carousel-fade .carousel-item.active {
-  opacity: 1;
-}
-/* Вставьте в основную часть main.css */
 .carousel-fade .carousel-item {
   opacity: 0 !important;
   transition-property: opacity !important;
-  transition-duration: 0.8s !important; /* Настраиваем время плавного растворения фото (почти секунда) */
+  transition-duration: 0.8s !important; 
 }
 
 .carousel-fade .carousel-item.active {
@@ -882,337 +747,183 @@ body {
 /* ==========================================================================
    ПОЛНАЯ МОДЕРНИЗИРОВАННАЯ МОБИЛЬНАЯ ВЕРСИЯ САЙТА СТРОЙ ПЕРЕСЛАВЛЬ
    ========================================================================== */
-/* ==========================================================================
-   ПОЛНАЯ МОДЕРНИЗИРОВАННАЯ МОБИЛЬНАЯ ВЕРСИЯ САЙТА СТРОЙ ПЕРЕСЛАВЛЬ
-   ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. ПЛАВНОЕ МЕНЮ НА ПОЛ-ЭКРАНА И ВЫДЕЛЕНИЕ АКТИВНОЙ СТРАНИЦЫ
-   -------------------------------------------------------------------------- */
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.photo-btn,
+.photo-btn-transparent,
+.nav-link,
+a[class*="-btn"] {
+  text-decoration: none !important;
+}
+.photo-btn:hover,
+.photo-btn-transparent:hover {
+  text-decoration: none !important;
+}
+
+.navbar .container-fluid,
+.bloki {
+  margin-inline: 0 !important;
+  padding-inline: 10px !important;
+}
+
 @media screen and (max-width: 991px) {
   .navbar-brand.logo {
     font-size: 20px !important;
   }
-
   .navbar .container-fluid img {
-    margin-left: 10px !important;
-    margin-right: 10px !important;
+    margin-inline: 10px !important;
+  }
+  .navbar-collapse {
+    padding-top: 15px !important;
+  }
+  .navbar-nav .nav-item {
+    text-align: center !important;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
   }
 
-  /* НАМЕРТВО ПЕРЕКРЫВАЕМ СТИЛИ: Меню выезжает плавно как шторка */
   .navbar-collapse {
     position: fixed !important;
     top: 56px !important;
     right: -100% !important;
-    width: 60% !important; /* Чуть увеличили, чтобы текст помещался */
+    width: 55% !important;
     height: calc(100vh - 56px) !important;
-    background-color: #ffffff !important;
-    background: #ffffff !important;
-    padding: 20px 15px !important;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1) !important;
-    transition: right 0.4s ease-in-out !important;
-    display: block !important; /* Убираем display: none от Bootstrap */
-    z-index: 99999 !important; /* Поднимаем в самый верх */
-  }
-
-  /* ==========================================================================
-   ИДЕАЛЬНЫЙ НАСТОЯЩИЙ ГАМБУРГЕР (ЛИНИИ ИЗ CSS)
-   ========================================================================== */
-  .navbar-toggler {
-    background-color: #d2b48c !important; /* Цвет вашей кнопки */
-    border: none !important;
-    border-radius: 50% !important;
-    padding: 10px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    box-shadow: 0 4px 10px rgba(140, 98, 57, 0.25) !important;
-    transition: all 0.2s ease-in-out !important;
-  }
-
-  /* Обертка для линий */
-  .custom-hamburger {
-    width: 22px;
-    height: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Ровно распределяет три линии по высоте */
-  }
-
-  /* Сами ярко-белые линии */
-  .custom-hamburger span {
-    display: block;
-    width: 100%;
-    height: 2.5px; /* Толщина линий */
-    background-color: #300114 !important; /* ЧИСТЫЙ БЕЛЫЙ ЦВЕТ LINES */
-    border-radius: 2px;
-    transition: all 0.35s ease-in-out;
-  }
-
-  /* Эффект легкого уменьшения кнопки при нажатии */
-  .navbar-toggler:active {
-    transform: scale(0.7) !important;
-    background-color: #836951 !important;
-  }
-
-  /* Когда меню открыто (Bootstrap добавляет этот класс автоматически по клику) */
-  .navbar-collapse.show {
-    right: 0 !important;
-    display: block !important;
-  }
-  /* НАЙДИТЕ ЭТОТ БЛОК И ЗАМЕНИТЕ В НЁМ СТРОКИ С ФОНОМ: */
-  .navbar-collapse {
-    position: fixed !important;
-    top: 56px !important;
-    right: -100% !important;
-    width: 60% !important;
-    height: calc(100vh - 56px) !important;
-
-    /* ИСПРАВЛЕНО: Делаем фон полупрозрачным (0.85 означает 85% видимости и 15% прозрачности) */
-    background-color: rgba(255, 255, 255, 0.7) !important;
-    background: rgba(255, 255, 255, 0.6) !important;
-
-    /* ДОПОЛНИТЕЛЬНО: Эффект размытия заднего плана (как на iPhone) для дорогого вида */
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-
+    background: rgba(255, 255, 255, 0.7) !important;
     padding: 20px 15px !important;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.05) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
     transition: right 0.4s ease-in-out !important;
     display: block !important;
     z-index: 99999 !important;
   }
-
+  .navbar-collapse.show {
+    right: 0 !important;
+    display: block !important;
+  }
   .navbar-nav {
     display: flex !important;
     flex-direction: column !important;
     gap: 12px !important;
   }
-
   .navbar-nav .nav-item .nav-link {
     text-align: center !important;
     padding: 10px 15px !important;
-    font-size: 20px !important;
+    font-size: 16px !important;
     font-weight: 500 !important;
     color: #300114 !important;
     border-radius: 8px !important;
-    transition: all 0.3s ease !important;
+    transition: all 0.35s ease !important;
+  }
+  .navbar-nav .nav-item .nav-link.active {
+    background-color: #deb887 !important;
+    color: #ffffff !important;
+    font-weight: bold !important;
   }
 
-  /* Выделение активной страницы */
-  .navbar-nav .nav-item .nav-link.active {
-    background-color: #d2b48c !important;
-    color: #ffffff !important;
-    border-radius: 8px !important;
-    font-weight: bold !important;
+  .navbar-toggler {
+    background-color: #deb887 !important;
+    border: none !important;
+    border-radius: 20px !important;
+    padding: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 10px rgba(140, 98, 57, 0.25) !important;
+    transition: all 0.35s ease-in-out !important;
+    position: relative !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+  }
+  .custom-hamburger {
+    width: 22px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .custom-hamburger span {
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    background-color: #ffffff !important;
+    border-radius: 2px;
+  }
+  .navbar-toggler:active {
+    transform: scale(0.7) !important;
+    background-color: #875d36 !important;
   }
 }
 
-/* --------------------------------------------------------------------------
-   2. ТРИ ПЕРВЫХ БЛОКА (МОЗАИКА КАРТИНОК)
-   -------------------------------------------------------------------------- */
 @media screen and (max-width: 768px) {
-  /* Разворачиваем абсолютно все контейнеры-родители */
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
   .bloki,
   .image-container,
   .kolonka,
   .blok-levo,
   .blok-pravo,
-  .blok-pravo-niz {
-    width: 100% !important;
-    max-width: 100% !important;
-    display: flex !important;
-    flex-direction: column !important;
-    padding: 0 6px !important;
-    margin: 0 0 15px 0 !important;
-    float: none !important;
-    box-sizing: border-box !important;
-    background: transparent !important; /* Убираем серый фон родительских блоков */
-    background-color: transparent !important;
-    border-radius: 0 !important; /* Сбрасываем скругления родителей, чтобы углы картинок не ломались */
-    clip-path: none !important;
-  }
-  .blok-levo {
-    padding: 10px 3px !important;
-  }
-
-  /* НАМЕРТВО УБИРАЕМ ОВАЛЫ у оберток картинок */
+  .blok-pravo-niz,
   .img-wrapper,
   .img-wrapper-right,
   .img-wrapper-right-niz {
     width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
-    border-radius: 24px !important; /* Жёстко задаём прямоугольные скруглённые углы */
-    background: transparent !important;
-    background-color: transparent !important;
-    overflow: hidden !important; /* Обрезает картинку строго по форме скругления 24px */
-    position: relative !important;
-    margin: 0 0 15px 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    clip-path: none !important; /* Убираем clip-path, если он был в ПК-версии */
-  }
-
-  /* КАРТОЧКА 1 (Левая - Главная) */
-  .img-wrapper img {
-    width: 100% !important;
-    height: 400px !important; /* Делаем первый блок длиннее */
-    object-fit: cover !important;
-    border-radius: 24px !important; /* Дублируем скругление для самой картинки */
-  }
-
-  /* Главный текст "Строительство с гарантией" */
-  .img-text {
-    position: absolute !important;
-    top: 19px !important; /* Отступ от верхнего края картинки */
-    left: 10px !important;
-    right: 20px !important;
-    font-size: 27px !important;
-    font-weight: bold !important;
-    color: #fff !important;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9) !important;
-    z-index: 2 !important;
-    white-space: nowrap !important;
-  }
-
-  /* ИСПРАВЛЕНО: Нижний текст "Строим дома на века..." и кнопки */
-  .img-text2 {
-    position: absolute !important;
-    top: 65px !important; /* Подтянули вплотную к верхнему тексту, убрав огромное расстояние */
-    left: 20px !important;
-    right: 20px !important;
-    z-index: 2 !important;
-    max-width: 280px;
-    width: 100% !important;
-    font-weight: 500 !important;
-  }
-
-  .img-text2 div:first-child {
-    font-size: 15px !important;
-    color: #fff !important;
-    margin-bottom: 8px !important; /* Минимальный отступ перед кнопками */
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9) !important;
-    line-height: 1.4 !important;
-    width: 100% !important;
-  }
-
-  /* Овальные капсульные кнопки ниже текста */
-  .img-text2 .btn-group {
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important; /* ИСПРАВЛЕНО: Кнопки теперь начинаются ровно на одном уровне слева */
-    gap: 10px !important;
-    width: 100% !important;
-    margin-top: 10px !important;
-  }
-  /* Сами кнопки: убираем margin: 0 auto, чтобы они не прыгали в центр */
-  .photo-btn,
-  .photo-btn-transparent {
-    width: fit-content !important;
-    max-width: 100% !important;
-    text-align: center !important;
-    padding: 12px 24px !important;
-    font-size: 15px !important;
-    border-radius: 50px !important;
-    display: inline-block !important;
+    padding: 0 !important;
+    margin: 0 0 15px 0 !important;
+    float: none !important;
     box-sizing: border-box !important;
-    margin: 0 !important; /* ИСПРАВЛЕНО: Сбросили центрирование, кнопки стоят ровно по левой сетке */
+    background: transparent !important;
+    clip-path: none !important;
   }
-  .photo-btn-transparent {
-    background-color: rgba(255, 255, 255, 0.25) !important;
-    border: 1px solid #300114 !important;
-    color: #300114 !important;
+  .bloki {
+    padding: 10px 15px !important;
+    margin: 65px 0 15px 0 !important;
+    float: none;
   }
 
-  /* КАРТОЧКА 2 (Правая верхняя) */
-  .img-wrapper-right {
-    border-radius: 28px !important; /* Скругление углов ещё больше */
-  }
-  .img-wrapper-right img {
+  .img-wrapper img {
     width: 100% !important;
-    height: 230px !important; /* Меньше по высоте */
+    height: 440px !important;
     object-fit: cover !important;
-    border-radius: 28px !important;
-    filter: brightness(1.2) !important; /* Делаем блок чуть посветлее */
+    border-radius: 24px !important;
   }
-
-  .img-text-right {
-    position: absolute !important;
-    top: 20px !important;
-    left: 20px !important;
-    right: 20px !important;
-    font-size: 20px !important;
-    font-weight: bold !important;
-    color: #fff !important;
-    z-index: 2 !important;
-  }
-
-  /* Текст typed поближе к названию */
-  .img-text3 {
-    position: absolute !important;
-    top: 80px !important; /* Подтянули выше к названию */
-    left: 20px !important;
-    right: 20px !important;
-    z-index: 2 !important;
-  }
-  #typed5 {
-    font-size: 16px !important;
-    font-weight: 500 !important;
-  }
-
-  /* Иконки контактов ближе друг к другу и СПРАВА */
-  .social-buttons-cascade {
-    position: absolute !important;
-    bottom: 20px !important;
-    right: 20px !important; /* Прижали к правому краю */
-    left: auto !important;
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 8px !important; /* Сделали ближе друг к другу */
-    z-index: 2 !important;
-  }
-  .round-social-btn {
-    width: 40px !important;
-    height: 40px !important;
-    border-radius: 50% !important;
-  }
-
-  /* КАРТОЧКА 3 (Правая нижняя) */
-  .img-wrapper-right-niz {
-    border-radius: 28px !important; /* Скругление углов как у второй карточки */
-  }
+  .img-wrapper-right img,
   .img-wrapper-right-niz img {
     width: 100% !important;
-    height: 230px !important; /* По высоте меньше, как и вторая */
+    height: 230px !important;
     object-fit: cover !important;
     border-radius: 28px !important;
   }
-  .img-text-right-niz {
-    position: absolute !important;
-    top: 20px !important;
-    left: 20px !important;
-    font-size: 20px !important;
-
-    z-index: 2 !important;
+  .img-wrapper-right img {
+    filter: brightness(1.2) !important;
   }
 
-  /* Нижний текст поближе к названию */
-  .img-text4 {
-    position: absolute !important;
-    top: 80px !important; /* Сместили повыше, поближе к названию */
-    bottom: auto !important;
-    left: 20px !important;
-    right: 20px !important;
-    z-index: 2 !important;
-    font-weight: 500 !important;
-  }
-  .img-text4 div {
-    font-size: 15px !important;
-    line-height: 1.4 !important;
-  }
-
-  /* Красивое общее напыление на картинки для читаемости текста */
   .img-wrapper::after,
   .img-wrapper-right::after,
   .img-wrapper-right-niz::after {
@@ -1232,94 +943,191 @@ body {
     pointer-events: none !important;
   }
 
-  /* --------------------------------------------------------------------------
-   3. БЛОК "ПОЧЕМУ СТОИТ ВЫБРАТЬ ИМЕННО НАС?" (ШАГИ)
-   -------------------------------------------------------------------------- */
-  /* 1. Исправляем первый заголовок "Почему стоит выбрать именно нас?" */
-  .steps-main-title {
-    font-size: 24px !important;
-    text-align: center !important;
-    font-weight: bold !important;
-    /* Увеличиваем верхний отступ, чтобы заголовок вылез из-под зафиксированной шапки */
-    margin-top: 90px !important;
-    margin-bottom: 30px !important;
-    padding-inline: 15px !important; /* Отступы только по бокам */
-    line-height: 1.4 !important;
+  .img-text,
+  .img-text2,
+  .img-text-right,
+  .img-text-right-niz,
+  .img-text3,
+  .img-text4,
+  .social-buttons-cascade {
+    z-index: 2 !important;
+    left: 20px !important;
+    right: 20px !important;
   }
 
-  /* 2. Идеальное центрирование текстов внутри шагов 01, 02, 03 */
+  .img-text {
+    position: absolute !important;
+    left: 36px !important;
+    top: 30px !important;
+    font-size: 23px !important;
+    font-weight: bold !important;
+    color: #fff !important;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9) !important;
+    white-space: nowrap !important;
+  }
+  .img-text2 {
+    position: absolute !important;
+    top: 85px !important;
+    left: 35px !important;
+    right: 20px !important;
+  }
+  .img-text2 div:first-child {
+    font-size: 15px !important;
+    color: #fff !important;
+    margin-bottom: 12px !important;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9) !important;
+    line-height: 1.4 !important;
+    max-width: 330px !important;
+    width: 100% !important;
+  }
+
+  .img-text-right,
+  .img-text-right-niz {
+    position: absolute !important;
+    top: 30px !important;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    color: #fff !important;
+  }
+  .img-text3,
+  .img-text4 {
+    position: absolute !important;
+    top: 95px !important;
+    bottom: auto !important;
+    color: #fff !important;
+  }
+  #typed5 {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+  }
+  .img-text4 div {
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+    color: #fff;
+  }
+
+  .img-text2 .btn-group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+  .photo-btn,
+  .photo-btn-transparent {
+    width: fit-content !important;
+    max-width: 100% !important;
+    padding: 10px 24px !important;
+    font-size: 15px !important;
+    border-radius: 50px !important;
+    display: inline-block !important;
+    margin: 0 !important;
+  }
+  .photo-btn-transparent {
+    background-color: rgba(255, 255, 255, 0.25) !important;
+    border: 1px solid #fff !important;
+    color: #fff !important;
+  }
+
+  .social-buttons-cascade {
+    position: absolute !important;
+    bottom: 20px !important;
+    right: 20px !important;
+    left: auto !important;
+    display: flex !important;
+    gap: 8px !important;
+  }
+  .round-social-btn {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+  }
+  .btn-x-twitter {
+    background-color: #f2eeee !important;
+    color: #300114 !important;
+  }
+  .btn-x-twitter i {
+    font-size: 18px !important;
+  }
+
+  .steps-container,
+  .step-item,
+  main,
+  section,
+  div[class*="col-"] {
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .steps-main-title {
+    font-size: 26px !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    margin: 100px 0 50px 0 !important;
+    padding-inline: 15px !important;
+    line-height: 1.4 !important;
+  }
   .steps-container {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important; /* Центрирует сами блоки */
-    gap: 35px !important;
-    padding-inline: 15px !important;
-    margin-bottom: 60px !important;
+    gap: 30px !important;
+    padding: 0 15px !important;
+    margin-bottom: 65px !important;
+    align-items: center !important;
   }
-
   .step-item {
     width: 100% !important;
     max-width: 100% !important;
-    text-align: center !important; /* Центрирует текст внутри блоков */
+    text-align: center !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    box-sizing: border-box !important;
+  }
+  .step-title {
+    font-size: 21px !important;
+    font-weight: bold !important;
+    margin: 10px 0 8px 0 !important;
+  }
+  .step-text {
+    font-size: 16px !important;
+    line-height: 1.4 !important;
+    max-width: 320px !important;
+    color: #300114 !important;
   }
 
   .step-number {
-    font-size: 18px !important; /* Удобный размер цифр */
+    font-size: 18px !important;
     font-weight: bold !important;
-    color: #ffffff !important; /* Белые цифры */
-    background-color: #d2b48c !important; /* Фирменный цвет кружка (зеленый/коричневый — измените на свой) */
-    width: 46px !important;
-    height: 46px !important;
+    color: #ffffff !important;
+    background-color: #deb887 !important;
+    width: 48px !important;
+    height: 48px !important;
     display: flex !important;
-    align-items: center !important; /* Выравнивание цифры строго по центру круга */
+    align-items: center !important;
     justify-content: center !important;
-    border-radius: 50% !important; /* Идеальный круг */
-    margin: 0 auto 15px auto !important; /* Центрируем сам круг на странице */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2) !important; /* Изящная легкая тень */
+    border-radius: 50% !important;
+    margin: 0 auto 12px auto !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
   }
 
-  .step-title {
-    font-size: 22px !important;
-    font-weight: bold !important;
-    margin-top: 10px !important;
-    margin-bottom: 8px !important;
-    text-align: center !important;
-  }
-
-  .step-text {
-    font-size: 16px !important;
-    line-height: 1.5 !important;
-    text-align: center !important;
-    color: #300114 !important;
-    max-width: 320px !important; /* Ограничиваем ширину, чтобы текст не размазывался по экрану */
-  }
-
-  /* 3. Исправляем кривой нижний заголовок "От закладки первого камня..." */
   .steps-main-title0 {
-    font-size: 24px !important;
+    font-size: 25px !important;
     font-weight: bold !important;
     text-align: center !important;
-    margin-top: 40px !important;
-    margin-bottom: 30px !important;
-    padding-inline: 15px !important; /* Паддинг только по бокам */
-    /* ИСПРАВЛЕНО: Увеличиваем межстрочный интервал, чтобы строчки не налезали друг на друга */
+    margin: 150px 0 30px 0 !important;
+    padding-inline: 20px !important;
     line-height: 1.4 !important;
   }
   .card-group0 {
     display: flex !important;
     flex-direction: column !important;
     gap: 35px !important;
-    /* Карточки стоят дальше друг от друга */
     padding: 0 15px !important;
   }
   .custom-card {
     width: 100% !important;
     border-radius: 16px !important;
-    /* УВЕЛИЧИЛИ ТЕНЬ ДЛЯ БОЛЬШЕГО ОБЪЕМА */
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15) !important;
     background-color: #fff !important;
     overflow: hidden !important;
@@ -1334,147 +1142,15 @@ body {
   }
   .custom-card .card-title {
     font-size: 22px !important;
-    /* Текст заголовка больше */
     font-weight: bold !important;
     margin-bottom: 12px !important;
   }
   .custom-card .card-text {
     font-size: 16px !important;
-    /* Текст описания больше */
     line-height: 1.5 !important;
     color: #300114 !important;
   }
-  /* Убираем подчеркивание у всех кнопок-ссылок на сайте */
-  .photo-btn,
-  .photo-btn-transparent,
-  .nav-link,
-  a[class*="-btn"] {
-    text-decoration: none !important; /* Намертво убирает нижнюю полосу */
-  }
-  .photo-btn:hover,
-  .photo-btn-transparent:hover {
-    text-decoration: none !important;
-  }
-  /* Поднимаем кнопку меню и саму шапку в самый верхний слой */
-  .fixed-top,
-  .navbar {
-    z-index: 100000 !important; /* Намертво закрепляет шапку поверх всех картинок и текстов */
-  }
 
-  .navbar-toggler {
-    position: relative !important;
-    z-index: 100001 !important; /* Гарантирует, что кнопка нажимается пальцем */
-    pointer-events: auto !important;
-  }
-}
-/* ==========================================================================
-   МОБИЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ ПОРТФОЛИО (BENTO GRID)
-   ========================================================================== */
-/* ==========================================================================
-   ИСПРАВЛЕННЫЕ МОБИЛЬНЫЕ СТИЛИ ДЛЯ СТРАНИЦЫ ПОРТФОЛИО (БЕНТО-ГРИД)
-   ========================================================================== */
-@media screen and (max-width: 768px) {
-  /* 1. Отменяем сетку из колонок и выстраиваем карточки вертикально */
-  .bento-container {
-    display: flex !important;
-    flex-direction: column !important; /* Выстраивает блоки строго друг под друга */
-    grid-template-columns: 1fr !important; /* На всякий случай сбрасываем CSS Grid */
-    gap: 20px !important; /* Удобный отступ между карточками */
-    padding: 0 15px !important; /* Паддинг только по бокам страницы */
-    margin-top: 80px !important; /* Выталкиваем из-под шапки сайта */
-    box-sizing: border-box !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  /* 2. НАМЕРТВО СБРОСИТЬ СЖАТИЕ У ВСЕХ ПЛИТОК (Дома, Брусчатка, Отделка и т.д.) */
-  .bento-item,
-  .block-bruschatka,
-  .block-garazhi,
-  .block-otdelka,
-  .block-vnutri,
-  div[class*="block-"],
-  div[class*="col-"] {
-    width: 100% !important; /* Каждая плитка растягивается на всю ширину экрана */
-    max-width: 100% !important;
-    grid-column: auto !important; /* Сбрасываем объединение колонок из ПК-версии */
-    grid-row: auto !important;
-    height: auto !important;
-    min-height: 280px !important; /* Красивая фиксированная высота для телефона */
-    border-radius: 24px !important; /* Ваши фирменные скругленные углы */
-    position: relative !important;
-    overflow: hidden !important;
-    margin: 0 0 10px 0 !important;
-    float: none !important;
-    box-sizing: border-box !important;
-  }
-
-  /* Большую карточку "ДОМА" (самую первую) сделаем повыше остальных */
-  .bento-item:first-child,
-  div[class*="block-"]:first-child {
-    min-height: 380px !important;
-  }
-
-  /* 3. Адаптируем фотографии и карусели внутри плиток */
-  .bento-item img,
-  .carousel-inner,
-  .carousel-item,
-  .carousel-item img {
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 280px !important;
-    object-fit: cover !important; /* Фотографии заполняют блок без сплющивания */
-    border-radius: 24px !important;
-  }
-
-  .bento-item:first-child img,
-  .bento-item:first-child .carousel-item img {
-    min-height: 380px !important;
-  }
-
-  /* 4. Исправляем заголовки на плитках (чтобы не переносились некрасиво) */
-  .bento-item h3,
-  .bento-item .block-title,
-  .bento-item div[class*="-title"],
-  .bento-item .img-text {
-    position: absolute !important;
-    top: 40px !important;
-    left: 20px !important;
-    font-size: 22px !important; /* Комфортный мобильный шрифт */
-    font-weight: bold !important;
-    color: #ffffff !important;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8) !important;
-    z-index: 5 !important;
-    margin: 0 !important;
-    white-space: nowrap !important; /* Заголовки строго в одну линию */
-  }
-
-  /* 5. Стрелочки переключения слайдов на смартфонах */
-  .bento-item .arrow,
-  .bento-item .carousel-control-prev,
-  .bento-item .carousel-control-next {
-    width: 38px !important;
-    height: 38px !important;
-    background-color: rgba(
-      0,
-      0,
-      0,
-      0.4
-    ) !important; /* Затемненный аккуратный кружок */
-    border-radius: 50% !important;
-    z-index: 6 !important;
-  }
-
-  /* Звездочки рейтинга */
-  .rating-stars,
-  .stars-container {
-    position: absolute !important;
-    top: 22px !important;
-    right: 20px !important;
-    z-index: 5 !important;
-  }
-
-  /* Добавьте в самый конец мобильного блока CSS */
   .bento-container,
   .bento-grid,
   [class*="bento-"],
@@ -1482,54 +1158,183 @@ body {
     display: flex !important;
     flex-direction: column !important;
     grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    padding: 0 15px !important;
+    margin-top: 80px !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
-  /* 1. Возвращаем карточку Отделка (block-garazhi) на её стандартное место */
+  .bento-item,
+  .block-bruschatka,
+  .block-garazhi,
+  .block-otdelka,
+  .block-vnutri,
+  .block-besedki,
+  div[class*="block-"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 320px !important;
+    min-height: 320px !important;
+    border-radius: 24px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin: 0 0 10px 0 !important;
+    box-sizing: border-box !important;
+  }
+  .bento-item:first-child,
+  div[class*="block-"]:first-child {
+    min-height: 420px !important;
+  }
+  .bento-item img,
+  .carousel-inner,
+  .carousel-item,
+  .carousel-item img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 24px !important;
+  }
+  .bento-item:first-child img,
+  .bento-item:first-child .carousel-item img {
+    min-height: 420px !important;
+  } 
+  .bento-arrow,
+  button.bento-arrow,
+  .bento-item .arrow,
+  .bento-item .carousel-control-prev,
+  .bento-item .carousel-control-next {
+    position: absolute !important;
+    z-index: 999999 !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    width: 38px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    height: 38px !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    border-radius: 50% !important;
+  }
   .block-garazhi h3,
-  .block-garazhi .block-title,
-  .block-garazhi div[class*="-title"],
-  .block-garazhi .img-text {
+  .block-garazhi .block-title {
     top: 20px !important;
     bottom: auto !important;
-  }
-
-  /* 2. НАЦЕЛИВАЕМСЯ НА ПРОЦЕСС РАБОТЫ (block-besedki) */
-  /* Опускаем надпись "ПРОЦЕСС РАБОТЫ" вниз карточки */
+  } 
   .block-besedki .bento-title-layer.title-bottom {
     position: absolute !important;
-    top: 75% !important;
-    bottom: 25px !important; /* Прижали к нижнему краю карточки */
+    top: auto !important;
+    bottom: 25px !important;
     left: 20px !important;
     right: 20px !important;
-    text-align: left !important;
-    font-size: 22px !important;
-    font-weight: bold !important;
-    color: #ffffff !important;
-    z-index: 5 !important;
+    pointer-events: none !important;
   }
-
-  /* ПРИНУДИТЕЛЬНОЕОЖИВЛЕНИЕ СТРЕЛОК НА КАРТОЧКЕ ДОМА */
-  .bento-item .bento-arrow,
-  .bento-item button[class*="bento-arrow"],
-  #bentoBesedki .bento-arrow,
-  div[id*="bento"] .bento-arrow {
+  .block-besedki .glass-stars-wrapper,
+  .block-besedki .bento-stars {
     position: absolute !important;
-    z-index: 999999 !important; /* Выталкиваем стрелочки на самый верхний слой над картинками! */
-    pointer-events: auto !important; /* Разрешаем клики пальцем */
-    cursor: pointer !important;
-    display: flex !important; /* Гарантируем, что они видны на телефоне */
+    top: 20px !important;
+    bottom: auto !important;
+    left: 20px !important;
+    right: auto !important;
+    display: flex !important;
+    z-index: 5 !important;
+    background: transparent !important;
+  }
+  .carousel-control-prev,
+  .prev,
+  [onclick*="-1"] {
+    left: 15px !important;
+    right: auto !important;
+  }
+  .carousel-control-next,
+  .next,
+  [onclick*="1"] {
+    right: 15px !important;
+    left: auto !important;
   }
 
-  /* Запрещаем тексту и плашкам перекрывать стрелки */
-  .bento-title-layer,
-  .glass-stars-wrapper {
-    pointer-events: none !important; /* Клик будет идти сквозь текст прямо на стрелки */
+  .bento-container .bento-item:first-child,
+  .block-doma {
+    height: 420px !important;
+    min-height: 420px !important;
   }
-  /* Поднимаем кастомные стрелочки бенто-галереи в самый верхний слой */
+
+  .bento-item img,
+  .bento-item .carousel-inner,
+  .bento-item .carousel-item,
+  .bento-item .carousel-item img,
+  div[class*="block-"] img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 24px !important;
+  }
+
+  .bento-item h3,
+  .bento-item .block-title,
+  .bento-item div[class*="-title"],
+  .bento-item .bento-title-layer,
+  .bento-item .img-text {
+    position: absolute !important;
+    top: 20px !important;
+    bottom: auto !important;
+    left: 20px !important;
+    right: 20px !important;
+    z-index: 5 !important;
+    color: #ffffff !important;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .block-besedki .bento-title-layer.title-bottom {
+    top: auto !important;
+    bottom: 25px !important;
+  }
+
   .bento-arrow,
-  button.bento-arrow {
-    position: relative !important;
-    z-index: 999999 !important; /* Выталкиваем над картинками и текстом */
-    pointer-events: auto !important; /* Принудительно разрешаем клики */
+  button.bento-arrow,
+  .bento-item .arrow {
+    position: absolute !important;
+    top: 55% !important;
+    transform: translateY(-50%) !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    bottom: auto !important;
+    right: auto !important;
+    z-index: 6 !important;
+    pointer-events: auto !important;
     cursor: pointer !important;
   }
+  .bento-arrow *,
+  button.bento-arrow *,
+  .bento-item .arrow * {
+    color: #fff !important;
+    fill: #fff !important;
+    font-size: 16px !important;
+  }
+  .bento-item .prev,
+  button.bento-arrow.prev,
+  .carousel-control-prev,
+  [onclick*="-1"] {
+    top: 50% !important;
+    bottom: auto !important;
+    left: 15px !important;
+    right: auto !important;
+  }
+
+  .bento-item .next,
+  button.bento-arrow.next,
+  .carousel-control-next,
+  [onclick*="1"] {
+    top: 50% !important;
+    bottom: auto !important;
+    right: 15px !important; 
+    left: auto !important;
+  }
+}
 }
