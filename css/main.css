@@ -227,6 +227,7 @@
   border: none;
   border-radius: 50px;
   font-family: "Montserrat", sans-serif !important;
+  text-decoration: none !important;
   font-size: 17px;
   font-weight: 300;
   cursor: pointer;
@@ -528,12 +529,12 @@ body {
 .round-social-btn:hover {
   transform: translateY(-5px) scale(1.1);
   z-index: 10 !important;
-  background-color: #300114;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  background-color: #300114 !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .round-social-btn:hover i {
-  color: #ffffff !important;
+  color: #fbf3f6 !important;
   transform: rotate(8deg);
 }
 
@@ -843,7 +844,7 @@ button.bento-arrow,
 
   .navbar-collapse {
     position: fixed !important;
-    top: 56px !important;
+    top: 62px !important;
     right: -100% !important;
     width: 55% !important;
     height: calc(100vh - 56px) !important;
@@ -859,11 +860,14 @@ button.bento-arrow,
   .navbar-collapse.show {
     right: 0 !important;
     display: block !important;
+    z-index: 5 !important;
   }
+
   .navbar-nav {
     display: flex !important;
     flex-direction: column !important;
     gap: 12px !important;
+    z-index: 1000 !important;
   }
   .navbar-nav .nav-item .nav-link {
     text-align: center !important;
@@ -895,22 +899,22 @@ button.bento-arrow,
     pointer-events: auto !important;
   }
   .custom-hamburger {
-    width: 22px;
-    height: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 22px !important;
+    height: 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
   }
   .custom-hamburger span {
-    display: block;
-    width: 100%;
-    height: 2.5px;
+    display: block !important;
+    width: 100% !important;
+    height: 2.5px !important;
     background-color: #ffffff !important;
-    border-radius: 2px;
+    border-radius: 2px !important;
   }
   .navbar-toggler:active {
     transform: scale(0.7) !important;
-    background-color: #875d36 !important;
+    background-color: #a6774b !important;
   }
 }
 
@@ -943,7 +947,7 @@ button.bento-arrow,
     clip-path: none !important;
   }
   .bloki {
-    padding: 10px 15px !important;
+    padding: 23px 15px !important;
     margin: 65px 0 15px 0 !important;
     float: none;
   }
@@ -999,7 +1003,7 @@ button.bento-arrow,
   .img-text {
     position: absolute !important;
     left: 36px !important;
-    top: 30px !important;
+    top: 55px !important;
     font-size: 23px !important;
     font-weight: bold !important;
     color: #fff !important;
@@ -1018,8 +1022,9 @@ button.bento-arrow,
     margin-bottom: 12px !important;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9) !important;
     line-height: 1.4 !important;
-    max-width: 330px !important;
-    width: 100% !important;
+
+    width: 280px !important;
+    margin-top: 20px !important;
   }
 
   .img-text-right,
@@ -1230,6 +1235,7 @@ button.bento-arrow,
   div[class*="block-"]:first-child {
     min-height: 420px !important;
   }
+
   .bento-item img,
   .carousel-inner,
   .carousel-item,
@@ -1239,6 +1245,7 @@ button.bento-arrow,
     min-height: 100% !important;
     object-fit: cover !important;
     border-radius: 24px !important;
+    box-shadow: 10px 20px 10px rgba(140, 98, 57, 0.26) !important;
   }
   .bento-item:first-child img,
   .bento-item:first-child .carousel-item img {
@@ -1257,7 +1264,7 @@ button.bento-arrow,
     top: 50% !important;
     transform: translateY(-50%) !important;
     height: 38px !important;
-    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-color: rgba(54, 51, 51, 0.4) !important;
     border-radius: 50% !important;
   }
 
@@ -1277,10 +1284,10 @@ button.bento-arrow,
 
   .bento-stars {
     color: #ffcc00;
-    font-size: 25px;
+    font-size: 19px;
     letter-spacing: 5px;
-    text-shadow: 2px 2px 8px rgba(255, 204, 0, 0.6);
-    margin-top: -8px !important;
+    text-shadow: 3px 3px 8px rgba(255, 204, 0, 0.7);
+    margin-top: -5px !important;
     bottom: auto !important;
     left: 20px !important;
     right: auto !important;
@@ -1293,7 +1300,7 @@ button.bento-arrow,
     top: 100px !important;
     left: 50px !important;
     z-index: 4;
-    padding: 10px 30px;
+    padding: 7px 15px;
     border-radius: 50px;
     background-color: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
@@ -1303,6 +1310,7 @@ button.bento-arrow,
     width: max-content;
     background: transparent !important;
   }
+
   .carousel-control-prev,
   .prev,
   [onclick*="-1"] {

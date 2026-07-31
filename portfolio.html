@@ -36,7 +36,13 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+  <!-- Вместо одной иконки вставляем 3 линии для гамбургера -->
+        <div class="custom-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -166,22 +172,26 @@
 <!-- КОНЕЦ ГАЛЕРЕИ РАБОТ BENTO -->
 
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var toggler = document.querySelector('.navbar-toggler');
+    var menuElement = document.getElementById('navbarSupportedContent');
     
+    if (toggler && menuElement) {
+        // Создаем экземпляр коллапса Bootstrap (для BS 5)
+        var bsCollapse = new bootstrap.Collapse(menuElement, { toggle: false });
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        var toggler = document.querySelector('.navbar-toggler');
-        var menu = document.querySelector('#navbarSupportedContent');
-        
-        if (toggler && menu) {
-          toggler.addEventListener('click', function(e) {
+        toggler.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            menu.classList.toggle('show'); // Принудительно выкатывает шторку меню
-          });
-        }
-      });
-    </script>
+            
+            // Вместо toggle('show') используем родной метод Bootstrap
+            bsCollapse.toggle(); 
+        });
+    }
+});
+</script>
+  
 <script>
 function moveBentoSlide(button, direction) {
     // 1. Находим карточку (.bento-item), в которой кликнули стрелку
