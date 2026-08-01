@@ -296,7 +296,7 @@ nav ul li a:not(.active):not(.btn):hover {
 
 nav ul li a.active {
   background-color: #d2b48c !important;
-  color: #ffffff !important;
+  color: #300114 !important;
   font-weight: 700 !important;
   padding: 8px 16px !important;
   border-radius: 8px !important;
@@ -422,7 +422,7 @@ nav ul li a:not(.active):not(.btn):hover::after {
   font-family: "Montserrat", sans-serif !important;
   font-weight: 500;
   font-size: 17px;
-  color: rgba(0, 0, 0, 0.5);
+  color: #300114;
   margin-bottom: 25px;
 }
 
@@ -1144,7 +1144,7 @@ button.bento-arrow,
   .step-number {
     font-size: 18px !important;
     font-weight: bold !important;
-    color: #ffffff !important;
+    color: #f9f6f7 !important;
     background-color: #deb887 !important;
     width: 48px !important;
     height: 48px !important;
