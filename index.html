@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="preload" as="image" href="img/home1.webp">
+    <link rel="preload" as="image" href="img/home6.webp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
 
@@ -14,8 +14,8 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
     <link rel="manifest" href="img/site.webmanifest" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" media="print" onload="this.media='all'">
  
 
     <link rel="stylesheet" href="css/main.css" />
@@ -76,6 +76,7 @@
 
                width="1027"
                height="770"
+               fetchpriority="high"
             />
 
             <div class="img-text ">
@@ -102,7 +103,7 @@
             <img
               src="img/beshev.webp"
               alt="опыт"
-               loading="lazy"
+
                width="671"
                height="403"
 
@@ -141,7 +142,7 @@
             <img
               src="img/glav.webp"
               alt=":"
-              loading="lazy"
+
               width="991"
                height="403"
             />
@@ -232,7 +233,7 @@
 
 
 
-    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js" defer></script>
     <script>
       var typed5 = new Typed('#typed5', {
         strings: ["Построим дом практически под ключ", "Гарантия качества", "Безопасность и уют", "Опыт больше 9 лет"],
@@ -246,7 +247,7 @@
     </script>
 
 
-    <script src="https://jsdelivr.net" defer></script>
+    <script src="https://jsdelivr.net" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
