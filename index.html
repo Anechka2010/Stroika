@@ -250,22 +250,25 @@
     </script>
 
 
-    <script src="https://jsdelivr.net" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js" defer></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-        var toggler = document.querySelector('.navbar-toggler');
-        var menu = document.querySelector('#navbarSupportedContent');
-        
-        if (toggler && menu) {
-          toggler.addEventListener('click', function(e) {
+   <script src="https://jsdelivr.net" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var toggler = document.querySelector('.navbar-toggler');
+    var menuElement = document.getElementById('navbarSupportedContent');
+
+    if (toggler && menuElement) {
+        var bsCollapse = new bootstrap.Collapse(menuElement, { toggle: false });
+
+        toggler.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            menu.classList.toggle('show'); // Принудительно выкатывает шторку меню
-          });
-        }
-      });
-    </script>
+            bsCollapse.toggle();
+        });
+    }
+});
+</script>
   </body>
   </main>
 </html>
